@@ -15,6 +15,9 @@
 		A8A686B52B763202002E38ED /* CastGalleryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A686B42B763202002E38ED /* CastGalleryTests.swift */; };
 		A8A686BF2B763202002E38ED /* CastGalleryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A686BE2B763202002E38ED /* CastGalleryUITests.swift */; };
 		A8A686C12B763202002E38ED /* CastGalleryUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A686C02B763202002E38ED /* CastGalleryUITestsLaunchTests.swift */; };
+		A8A686EA2B764426002E38ED /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A686E92B764426002E38ED /* Coordinator.swift */; };
+		A8A686ED2B7644A7002E38ED /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A686EC2B7644A7002E38ED /* AppCoordinator.swift */; };
+		A8A686EF2B764520002E38ED /* AppFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A686EE2B764520002E38ED /* AppFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		A8A686BA2B763202002E38ED /* CastGalleryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CastGalleryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8A686BE2B763202002E38ED /* CastGalleryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastGalleryUITests.swift; sourceTree = "<group>"; };
 		A8A686C02B763202002E38ED /* CastGalleryUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastGalleryUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A8A686E92B764426002E38ED /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		A8A686EC2B7644A7002E38ED /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		A8A686EE2B764520002E38ED /* AppFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -289,6 +295,7 @@
 		A8A686E12B763973002E38ED /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				A8A686EB2B764484002E38ED /* AppCoordinator */,
 				A8A686E22B763991002E38ED /* CoordinatorScreens */,
 				A8A686E32B76399F002E38ED /* Utils */,
 			);
@@ -312,6 +319,7 @@
 		A8A686E42B763CFF002E38ED /* Factories */ = {
 			isa = PBXGroup;
 			children = (
+				A8A686EE2B764520002E38ED /* AppFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -338,6 +346,15 @@
 				A8A6869F2B7631FF002E38ED /* SceneDelegate.swift */,
 			);
 			path = System;
+			sourceTree = "<group>";
+		};
+		A8A686EB2B764484002E38ED /* AppCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				A8A686E92B764426002E38ED /* Coordinator.swift */,
+				A8A686EC2B7644A7002E38ED /* AppCoordinator.swift */,
+			);
+			path = AppCoordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -470,7 +487,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8A686EF2B764520002E38ED /* AppFactory.swift in Sources */,
+				A8A686EA2B764426002E38ED /* Coordinator.swift in Sources */,
 				A8A686A22B7631FF002E38ED /* HomeController.swift in Sources */,
+				A8A686ED2B7644A7002E38ED /* AppCoordinator.swift in Sources */,
 				A8A6869E2B7631FF002E38ED /* AppDelegate.swift in Sources */,
 				A8A686A02B7631FF002E38ED /* SceneDelegate.swift in Sources */,
 			);
