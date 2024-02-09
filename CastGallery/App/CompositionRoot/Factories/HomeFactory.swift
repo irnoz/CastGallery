@@ -14,6 +14,8 @@ protocol HomeFactory {
 struct HomeFactoryImplementation: HomeFactory {
     
     func makeModule() -> UIViewController {
-        return HomeController()
+        let homeController = HomeController()
+        homeController.title = "Rick and Morty"
+        return homeController
     }
 }
