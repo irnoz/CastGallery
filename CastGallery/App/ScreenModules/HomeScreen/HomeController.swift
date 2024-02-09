@@ -20,7 +20,7 @@ final class HomeController: UICollectionViewController {
     }
     
     private func configureCollectionView() {
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "id")
+        collectionView.register(HomeItemCell.self, forCellWithReuseIdentifier: HomeItemCell.reuseIdentifier)
     }
 }
 
@@ -30,7 +30,11 @@ extension HomeController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "id", for: indexPath)
+        guard let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: HomeItemCell.reuseIdentifier, for: indexPath) as? HomeItemCell
+        else {
+            return UICollectionViewCell()
+        }
         cell.backgroundColor = .orange
         return cell
     }
