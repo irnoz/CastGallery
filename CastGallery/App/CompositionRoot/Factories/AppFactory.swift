@@ -13,21 +13,8 @@ protocol AppFactory {
 
 struct AppFactoryImplementation: AppFactory {
     func makeHomeCoordinator(navigation: UINavigationController) -> Coordinator {
-        let fakeCoordinator = FakeCoordinator(navigation: navigation)
-        return fakeCoordinator
+        let homeFactory = HomeFactoryImplementation()
+        let homeCoordinator = HomeCoordinator(navigation: navigation, homeFactory: homeFactory)
+        return homeCoordinator
     }
-}
-
-final class FakeCoordinator: Coordinator {
-    var navigation: UINavigationController
-    
-    init(navigation: UINavigationController) {
-        self.navigation = navigation
-    }
-    
-    func start() {
-        
-    }
-    
-    
 }

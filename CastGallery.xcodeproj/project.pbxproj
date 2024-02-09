@@ -18,6 +18,8 @@
 		A8A686EA2B764426002E38ED /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A686E92B764426002E38ED /* Coordinator.swift */; };
 		A8A686ED2B7644A7002E38ED /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A686EC2B7644A7002E38ED /* AppCoordinator.swift */; };
 		A8A686EF2B764520002E38ED /* AppFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A686EE2B764520002E38ED /* AppFactory.swift */; };
+		A8A686F12B765666002E38ED /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A686F02B765666002E38ED /* HomeCoordinator.swift */; };
+		A8A686F32B7656C7002E38ED /* HomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A686F22B7656C7002E38ED /* HomeFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		A8A686E92B764426002E38ED /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		A8A686EC2B7644A7002E38ED /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		A8A686EE2B764520002E38ED /* AppFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFactory.swift; sourceTree = "<group>"; };
+		A8A686F02B765666002E38ED /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		A8A686F22B7656C7002E38ED /* HomeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -305,6 +309,7 @@
 		A8A686E22B763991002E38ED /* CoordinatorScreens */ = {
 			isa = PBXGroup;
 			children = (
+				A8A686F02B765666002E38ED /* HomeCoordinator.swift */,
 			);
 			path = CoordinatorScreens;
 			sourceTree = "<group>";
@@ -320,6 +325,7 @@
 			isa = PBXGroup;
 			children = (
 				A8A686EE2B764520002E38ED /* AppFactory.swift */,
+				A8A686F22B7656C7002E38ED /* HomeFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -492,6 +498,8 @@
 				A8A686A22B7631FF002E38ED /* HomeController.swift in Sources */,
 				A8A686ED2B7644A7002E38ED /* AppCoordinator.swift in Sources */,
 				A8A6869E2B7631FF002E38ED /* AppDelegate.swift in Sources */,
+				A8A686F32B7656C7002E38ED /* HomeFactory.swift in Sources */,
+				A8A686F12B765666002E38ED /* HomeCoordinator.swift in Sources */,
 				A8A686A02B7631FF002E38ED /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
