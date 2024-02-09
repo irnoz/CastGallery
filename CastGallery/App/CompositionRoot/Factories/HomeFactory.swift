@@ -21,6 +21,9 @@ struct HomeFactoryImplementation: HomeFactory {
     
     private func makeLayout() -> UICollectionViewLayout {
         let layout = UICollectionViewFlowLayout()
+        let layoutWidth = UIScreen.main.bounds.width / 2 - 8
+        let layoutHeight = UIScreen.main.bounds.width / 2 - 8
+        layout.itemSize = CGSize(width: layoutWidth, height: layoutHeight)
         return layout
     }
 }
