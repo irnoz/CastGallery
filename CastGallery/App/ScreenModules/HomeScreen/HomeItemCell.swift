@@ -35,31 +35,9 @@ final class HomeItemCell: UICollectionViewCell {
     private func configureUI() {
         addSubview(mainContainer)
         mainContainer.fillSuperView(widthPadding: 8)
-//        mainContainer.setConstraints(
-//            top: topAnchor, bottom: bottomAnchor,
-//            left: leftAnchor, right: rightAnchor,
-//            pTop: 8, pBottom: 8, pLeft: 8, pRight: 8
-//        )
     }
     
 }
 
 extension HomeItemCell: Reusable { }
 
-//final class HomeItemCell: UICollectionViewCell {
-//    // MARK: - Public Properties
-//
-//    // MARK: - Private Properties
-//
-//    // MARK: - Life Cycle
-//
-//    override init(frame: CGRect) {
-//        <#code#>
-//    }
-//
-//    // MARK: - Helpers
-//
-//    // MARK: - Actions
-//}
-//
-//// MARK: - Extensions
