@@ -34,6 +34,9 @@
 		A8A687172B77DDA1002E38ED /* ApiClientServiceImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A687162B77DDA1002E38ED /* ApiClientServiceImplementation.swift */; };
 		A8A6871A2B77DE6B002E38ED /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A687192B77DE6B002E38ED /* ApiError.swift */; };
 		A8A6871D2B77E48A002E38ED /* HttpResponseStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A6871C2B77E48A002E38ED /* HttpResponseStatus.swift */; };
+		A8A687202B77E857002E38ED /* MenuDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A6871F2B77E857002E38ED /* MenuDTO.swift */; };
+		A8A687222B77E913002E38ED /* MenuDto+Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A687212B77E913002E38ED /* MenuDto+Mapper.swift */; };
+		A8A687242B77E98A002E38ED /* PropertyIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A687232B77E98A002E38ED /* PropertyIterator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +88,9 @@
 		A8A687162B77DDA1002E38ED /* ApiClientServiceImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientServiceImplementation.swift; sourceTree = "<group>"; };
 		A8A687192B77DE6B002E38ED /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		A8A6871C2B77E48A002E38ED /* HttpResponseStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpResponseStatus.swift; sourceTree = "<group>"; };
+		A8A6871F2B77E857002E38ED /* MenuDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDTO.swift; sourceTree = "<group>"; };
+		A8A687212B77E913002E38ED /* MenuDto+Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MenuDto+Mapper.swift"; sourceTree = "<group>"; };
+		A8A687232B77E98A002E38ED /* PropertyIterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyIterator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -315,6 +321,7 @@
 			isa = PBXGroup;
 			children = (
 				A8A686F92B7667DC002E38ED /* Reusable.swift */,
+				A8A687232B77E98A002E38ED /* PropertyIterator.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -412,6 +419,7 @@
 		A8A686FC2B77C9DC002E38ED /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				A8A6871E2B77E842002E38ED /* DTO */,
 				A8A687042B77CB24002E38ED /* Repositories */,
 			);
 			path = Data;
@@ -507,6 +515,15 @@
 				A8A6871C2B77E48A002E38ED /* HttpResponseStatus.swift */,
 			);
 			path = StatusResponse;
+			sourceTree = "<group>";
+		};
+		A8A6871E2B77E842002E38ED /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				A8A6871F2B77E857002E38ED /* MenuDTO.swift */,
+				A8A687212B77E913002E38ED /* MenuDto+Mapper.swift */,
+			);
+			path = DTO;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -641,6 +658,7 @@
 			files = (
 				A8A686F62B76620C002E38ED /* HomeItemCell.swift in Sources */,
 				A8A686FA2B7667DC002E38ED /* Reusable.swift in Sources */,
+				A8A687202B77E857002E38ED /* MenuDTO.swift in Sources */,
 				A8A687092B77CC12002E38ED /* LoadMenuUseCase.swift in Sources */,
 				A8A686EF2B764520002E38ED /* AppFactory.swift in Sources */,
 				A8A686EA2B764426002E38ED /* Coordinator.swift in Sources */,
@@ -655,8 +673,10 @@
 				A8A687062B77CB4A002E38ED /* MenuRepositoryImplementation.swift in Sources */,
 				A8A6871A2B77DE6B002E38ED /* ApiError.swift in Sources */,
 				A8A6869E2B7631FF002E38ED /* AppDelegate.swift in Sources */,
+				A8A687242B77E98A002E38ED /* PropertyIterator.swift in Sources */,
 				A8A6871D2B77E48A002E38ED /* HttpResponseStatus.swift in Sources */,
 				A8A686F32B7656C7002E38ED /* HomeFactory.swift in Sources */,
+				A8A687222B77E913002E38ED /* MenuDto+Mapper.swift in Sources */,
 				A8A686F82B766401002E38ED /* UIView+Constraints.swift in Sources */,
 				A8A686F12B765666002E38ED /* HomeCoordinator.swift in Sources */,
 				A8A686A02B7631FF002E38ED /* SceneDelegate.swift in Sources */,
