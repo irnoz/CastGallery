@@ -7,85 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F37B1F8B-FD33-478B-98D6-A2AFD0295D5B"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CastGallery/App/Networking/Implementations/ApiClientServiceImplementation.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "decodeModel(data:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "EC437FB9-7455-44FF-A6B8-5559EC5241DA"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CastGallery/App/Networking/Implementations/ApiClientServiceImplementation.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "decodeModel(data:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "EC437FB9-7455-44FF-A6B8-5559EC5241DA - c032d3ccee81c4f2"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CastGallery.ApiClientServiceImplementation.decodeModel&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(data: Foundation.Data) throws -&gt; &#x3c4;_0_0"
-                  moduleName = "CastGallery"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/noza/Developer/projects/IosProjects/CastGallery/CastGallery/App/Networking/Implementations/ApiClientServiceImplementation.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "48"
-                  endingLineNumber = "48"
-                  offsetFromSymbolStart = "404">
-               </Location>
-               <Location
-                  uuid = "EC437FB9-7455-44FF-A6B8-5559EC5241DA - c032d3ccee81c4f2"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CastGallery.ApiClientServiceImplementation.decodeModel&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(data: Foundation.Data) throws -&gt; &#x3c4;_0_0"
-                  moduleName = "CastGallery"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/noza/Developer/projects/IosProjects/CastGallery/CastGallery/App/Networking/Implementations/ApiClientServiceImplementation.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "48"
-                  endingLineNumber = "48"
-                  offsetFromSymbolStart = "410">
-               </Location>
-               <Location
-                  uuid = "EC437FB9-7455-44FF-A6B8-5559EC5241DA - c032d3ccee81c4f2"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CastGallery.ApiClientServiceImplementation.decodeModel&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(data: Foundation.Data) throws -&gt; &#x3c4;_0_0"
-                  moduleName = "CastGallery"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/noza/Developer/projects/IosProjects/CastGallery/CastGallery/App/Networking/Implementations/ApiClientServiceImplementation.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "48"
-                  endingLineNumber = "48"
-                  offsetFromSymbolStart = "617">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "8DD95B7E-41EE-4835-8075-0E999634435E"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -96,22 +17,6 @@
             startingLineNumber = "13"
             endingLineNumber = "13"
             landmarkName = "toDomain()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "EC3FDA24-082A-4F24-BE33-C3122AFEAC84"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CastGallery/App/Networking/Implementations/ApiClientServiceImplementation.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "validateResponse(request:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

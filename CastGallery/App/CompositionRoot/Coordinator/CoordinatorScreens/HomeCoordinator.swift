@@ -22,8 +22,18 @@ final class HomeCoordinator: Coordinator {
     }
 }
 
+// MARK: - toBeRemoved
 extension HomeCoordinator: HomeViewControllerCoordinator {
     func didSelectMenuCell(model: MenuItem) {
-        print("is going to another screen")
+        switch model.title {
+        case "characters":
+            goToCharacters()
+        default:
+            break
+        }
+    }
+    
+    private func goToCharacters() {
+        print("character screen")
     }
 }
