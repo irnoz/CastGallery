@@ -34,12 +34,13 @@ final class HomeController: UICollectionViewController {
         viewModel
             .state
             .receive(on: RunLoop.main)
-            .sink { state in
+            .sink { [weak self] state in
+                self?.hideSpinner()
             switch state {
             case .succes:
-                self.collectionView.reloadData()
+                self?.collectionView.reloadData()
             case .loading:
-                print("loading...")
+                self?.showSpinner()
             case .fail(error: let error):
                 print("error", error)
             }
@@ -73,4 +74,6 @@ extension HomeController {
         return cell
     }
 }
+
+extension HomeController: SpinnerDisplayable { }
 
