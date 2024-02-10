@@ -23,6 +23,9 @@
 		A8A686F62B76620C002E38ED /* HomeItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A686F52B76620C002E38ED /* HomeItemCell.swift */; };
 		A8A686F82B766401002E38ED /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A686F72B766401002E38ED /* UIView+Constraints.swift */; };
 		A8A686FA2B7667DC002E38ED /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A686F92B7667DC002E38ED /* Reusable.swift */; };
+		A8A687002B77CA34002E38ED /* MenuRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A686FF2B77CA34002E38ED /* MenuRepository.swift */; };
+		A8A687032B77CAA0002E38ED /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A687022B77CAA0002E38ED /* MenuItem.swift */; };
+		A8A687062B77CB4A002E38ED /* MenuRepositoryImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A687052B77CB4A002E38ED /* MenuRepositoryImplementation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,9 @@
 		A8A686F52B76620C002E38ED /* HomeItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItemCell.swift; sourceTree = "<group>"; };
 		A8A686F72B766401002E38ED /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		A8A686F92B7667DC002E38ED /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		A8A686FF2B77CA34002E38ED /* MenuRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuRepository.swift; sourceTree = "<group>"; };
+		A8A687022B77CAA0002E38ED /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		A8A687052B77CB4A002E38ED /* MenuRepositoryImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuRepositoryImplementation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,8 +215,9 @@
 		A8A686D42B76342E002E38ED /* HomeScreen */ = {
 			isa = PBXGroup;
 			children = (
-				A8A686A12B7631FF002E38ED /* HomeController.swift */,
-				A8A686F52B76620C002E38ED /* HomeItemCell.swift */,
+				A8A686FD2B77C9E8002E38ED /* Domain */,
+				A8A686FC2B77C9DC002E38ED /* Data */,
+				A8A686FB2B77C9C4002E38ED /* Presentation */,
 			);
 			path = HomeScreen;
 			sourceTree = "<group>";
@@ -372,6 +379,56 @@
 			path = AppCoordinator;
 			sourceTree = "<group>";
 		};
+		A8A686FB2B77C9C4002E38ED /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				A8A686A12B7631FF002E38ED /* HomeController.swift */,
+				A8A686F52B76620C002E38ED /* HomeItemCell.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		A8A686FC2B77C9DC002E38ED /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				A8A687042B77CB24002E38ED /* Repositories */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		A8A686FD2B77C9E8002E38ED /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				A8A687012B77CA80002E38ED /* Entities */,
+				A8A686FE2B77C9F7002E38ED /* InterfaceRepositories */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		A8A686FE2B77C9F7002E38ED /* InterfaceRepositories */ = {
+			isa = PBXGroup;
+			children = (
+				A8A686FF2B77CA34002E38ED /* MenuRepository.swift */,
+			);
+			path = InterfaceRepositories;
+			sourceTree = "<group>";
+		};
+		A8A687012B77CA80002E38ED /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				A8A687022B77CAA0002E38ED /* MenuItem.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		A8A687042B77CB24002E38ED /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				A8A687052B77CB4A002E38ED /* MenuRepositoryImplementation.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -506,8 +563,11 @@
 				A8A686FA2B7667DC002E38ED /* Reusable.swift in Sources */,
 				A8A686EF2B764520002E38ED /* AppFactory.swift in Sources */,
 				A8A686EA2B764426002E38ED /* Coordinator.swift in Sources */,
+				A8A687002B77CA34002E38ED /* MenuRepository.swift in Sources */,
 				A8A686A22B7631FF002E38ED /* HomeController.swift in Sources */,
+				A8A687032B77CAA0002E38ED /* MenuItem.swift in Sources */,
 				A8A686ED2B7644A7002E38ED /* AppCoordinator.swift in Sources */,
+				A8A687062B77CB4A002E38ED /* MenuRepositoryImplementation.swift in Sources */,
 				A8A6869E2B7631FF002E38ED /* AppDelegate.swift in Sources */,
 				A8A686F32B7656C7002E38ED /* HomeFactory.swift in Sources */,
 				A8A686F82B766401002E38ED /* UIView+Constraints.swift in Sources */,
