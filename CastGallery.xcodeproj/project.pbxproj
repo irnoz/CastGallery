@@ -39,6 +39,7 @@
 		A8A687242B77E98A002E38ED /* PropertyIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A687232B77E98A002E38ED /* PropertyIterator.swift */; };
 		A8A687262B77EBD2002E38ED /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A687252B77EBD2002E38ED /* Endpoint.swift */; };
 		A8A687292B7808EB002E38ED /* SpinnerDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A687282B7808EB002E38ED /* SpinnerDisplayable.swift */; };
+		A8A6872B2B780972002E38ED /* ViewVlaues.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A6872A2B780972002E38ED /* ViewVlaues.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		A8A687232B77E98A002E38ED /* PropertyIterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyIterator.swift; sourceTree = "<group>"; };
 		A8A687252B77EBD2002E38ED /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		A8A687282B7808EB002E38ED /* SpinnerDisplayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerDisplayable.swift; sourceTree = "<group>"; };
+		A8A6872A2B780972002E38ED /* ViewVlaues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewVlaues.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -279,6 +281,7 @@
 		A8A686D82B7635E2002E38ED /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				A8A6872A2B780972002E38ED /* ViewVlaues.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -676,6 +679,7 @@
 				A8A686FA2B7667DC002E38ED /* Reusable.swift in Sources */,
 				A8A687202B77E857002E38ED /* MenuDTO.swift in Sources */,
 				A8A687092B77CC12002E38ED /* LoadMenuUseCase.swift in Sources */,
+				A8A6872B2B780972002E38ED /* ViewVlaues.swift in Sources */,
 				A8A686EF2B764520002E38ED /* AppFactory.swift in Sources */,
 				A8A686EA2B764426002E38ED /* Coordinator.swift in Sources */,
 				A8A687112B77CFBC002E38ED /* HomeItemViewModel.swift in Sources */,
