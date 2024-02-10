@@ -48,7 +48,7 @@ final class HomeController: UICollectionViewController {
             case .loading:
                 self?.showSpinner()
             case .fail(error: let error):
-                self?.presentAlert(message: error, title: "Error")
+                self?.presentAlert(message: error, title: AppLocalized.error)
             }
         }.store(in: &cancellable)
     }

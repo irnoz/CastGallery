@@ -41,6 +41,9 @@
 		A8A687292B7808EB002E38ED /* SpinnerDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A687282B7808EB002E38ED /* SpinnerDisplayable.swift */; };
 		A8A6872B2B780972002E38ED /* ViewVlaues.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A6872A2B780972002E38ED /* ViewVlaues.swift */; };
 		A8A6872D2B780D05002E38ED /* MessageDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A6872C2B780D05002E38ED /* MessageDisplayable.swift */; };
+		A8A6872F2B7813E8002E38ED /* AppLocalized.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A6872E2B7813E8002E38ED /* AppLocalized.swift */; };
+		A8A687312B7815EC002E38ED /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A687302B7815EC002E38ED /* Images.swift */; };
+		A8A687332B781B94002E38ED /* CharactersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A687322B781B94002E38ED /* CharactersFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +102,9 @@
 		A8A687282B7808EB002E38ED /* SpinnerDisplayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerDisplayable.swift; sourceTree = "<group>"; };
 		A8A6872A2B780972002E38ED /* ViewVlaues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewVlaues.swift; sourceTree = "<group>"; };
 		A8A6872C2B780D05002E38ED /* MessageDisplayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDisplayable.swift; sourceTree = "<group>"; };
+		A8A6872E2B7813E8002E38ED /* AppLocalized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLocalized.swift; sourceTree = "<group>"; };
+		A8A687302B7815EC002E38ED /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		A8A687322B781B94002E38ED /* CharactersFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,7 +218,6 @@
 			children = (
 				A8A687272B7808D9002E38ED /* Components */,
 				A8A686E02B763799002E38ED /* Localize */,
-				A8A686DF2B76377D002E38ED /* StateController */,
 				A8A686DE2B76376E002E38ED /* Utils */,
 				A8A686DA2B763602002E38ED /* Layer */,
 				A8A686D82B7635E2002E38ED /* Constants */,
@@ -237,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				A8A686A62B763201002E38ED /* Assets.xcassets */,
+				A8A687302B7815EC002E38ED /* Images.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -291,6 +297,7 @@
 		A8A686D92B7635ED002E38ED /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				A8A686DF2B76377D002E38ED /* StateController */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -323,7 +330,6 @@
 			isa = PBXGroup;
 			children = (
 				A8A686D92B7635ED002E38ED /* Components */,
-				A8A6870E2B77CE9B002E38ED /* StateController.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -340,6 +346,7 @@
 		A8A686DF2B76377D002E38ED /* StateController */ = {
 			isa = PBXGroup;
 			children = (
+				A8A6870E2B77CE9B002E38ED /* StateController.swift */,
 			);
 			path = StateController;
 			sourceTree = "<group>";
@@ -347,6 +354,7 @@
 		A8A686E02B763799002E38ED /* Localize */ = {
 			isa = PBXGroup;
 			children = (
+				A8A6872E2B7813E8002E38ED /* AppLocalized.swift */,
 			);
 			path = Localize;
 			sourceTree = "<group>";
@@ -381,6 +389,7 @@
 			children = (
 				A8A686EE2B764520002E38ED /* AppFactory.swift */,
 				A8A686F22B7656C7002E38ED /* HomeFactory.swift */,
+				A8A687322B781B94002E38ED /* CharactersFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -686,6 +695,7 @@
 				A8A686EF2B764520002E38ED /* AppFactory.swift in Sources */,
 				A8A686EA2B764426002E38ED /* Coordinator.swift in Sources */,
 				A8A687112B77CFBC002E38ED /* HomeItemViewModel.swift in Sources */,
+				A8A687332B781B94002E38ED /* CharactersFactory.swift in Sources */,
 				A8A687002B77CA34002E38ED /* MenuRepository.swift in Sources */,
 				A8A687172B77DDA1002E38ED /* ApiClientServiceImplementation.swift in Sources */,
 				A8A6870D2B77CD4B002E38ED /* HomeViewModel.swift in Sources */,
@@ -695,8 +705,10 @@
 				A8A686ED2B7644A7002E38ED /* AppCoordinator.swift in Sources */,
 				A8A687062B77CB4A002E38ED /* MenuRepositoryImplementation.swift in Sources */,
 				A8A6871A2B77DE6B002E38ED /* ApiError.swift in Sources */,
+				A8A687312B7815EC002E38ED /* Images.swift in Sources */,
 				A8A6869E2B7631FF002E38ED /* AppDelegate.swift in Sources */,
 				A8A687242B77E98A002E38ED /* PropertyIterator.swift in Sources */,
+				A8A6872F2B7813E8002E38ED /* AppLocalized.swift in Sources */,
 				A8A6871D2B77E48A002E38ED /* HttpResponseStatus.swift in Sources */,
 				A8A686F32B7656C7002E38ED /* HomeFactory.swift in Sources */,
 				A8A687222B77E913002E38ED /* MenuDto+Mapper.swift in Sources */,

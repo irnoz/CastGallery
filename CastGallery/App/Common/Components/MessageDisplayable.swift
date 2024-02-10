@@ -16,7 +16,7 @@ extension MessageDisplayable where Self: UIViewController {
             message: message,
             preferredStyle: .alert)
 
-        let okAction = UIAlertAction(title: "OK", style: .default)
+        let okAction = UIAlertAction(title: AppLocalized.okButton, style: .default)
         alertController.addAction(okAction)
         self.present(alertController, animated: true)
     }

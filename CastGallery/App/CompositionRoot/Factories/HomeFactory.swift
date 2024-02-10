@@ -21,18 +21,19 @@ struct HomeFactoryImplementation: HomeFactory {
         let loadMenuUseCase = LoadMenuUseCaseImplementation(menuRepository: menuRepository)
         let homeViewModel = HomeViewModelImplementation(state: state, loadMenuUseCase: loadMenuUseCase)
         let homeController = HomeController(viewModel: homeViewModel, layout: makeLayout(), coordinator: coordinator)
-        homeController.title = "Rick and Morty"
+        homeController.title = AppLocalized.appName
         return homeController
     }
 
     private func makeLayout() -> UICollectionViewFlowLayout {
         let layout = UICollectionViewFlowLayout()
-        let layoutWidth = (UIScreen.main.bounds.width - 16) / 2
-        let layoutHeight = (UIScreen.main.bounds.width - 16) / 2
+        let layoutWidth = (ViewValues.widthScreen - ViewValues.doublePadding) / ViewValues.multiplierTwo
+        let layoutHeight = (ViewValues.widthScreen - ViewValues.doublePadding) / ViewValues.multiplierTwo
         layout.itemSize = CGSize(width: layoutWidth, height: layoutHeight)
         layout.minimumLineSpacing = .zero
         layout.minimumInteritemSpacing = .zero
-        layout.sectionInset = UIEdgeInsets(top: .zero, left: 8, bottom: .zero, right: 8)
+        layout.sectionInset = UIEdgeInsets(top: .zero, left: ViewValues.normalPadding,
+                                           bottom: .zero, right: ViewValues.normalPadding)
         return layout
     }
 }

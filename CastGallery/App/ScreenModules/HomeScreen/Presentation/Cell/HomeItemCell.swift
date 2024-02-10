@@ -12,14 +12,14 @@ final class HomeItemCell: UICollectionViewCell {
     private let mainContainer: UIView = {
         let view = UIView()
         view.backgroundColor = .systemGroupedBackground
-        view.layer.cornerRadius = 8
+        view.layer.cornerRadius = ViewValues.defaultCornerRadius
         view.layer.masksToBounds = true
         return view
     }()
 
     private let categoryMenuImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "default")
+        imageView.image = UIImage(named: Images.defaultImage)
         imageView.contentMode = .scaleAspectFill
         return imageView
     }()
@@ -27,7 +27,6 @@ final class HomeItemCell: UICollectionViewCell {
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.textColor = .white
-        label.text = "Category"
         label.font = UIFont.preferredFont(forTextStyle: .headline)
         return label
     }()
@@ -43,7 +42,7 @@ final class HomeItemCell: UICollectionViewCell {
 
     private func configureUI() {
         addSubview(mainContainer)
-        mainContainer.fillSuperView(widthPadding: 8)
+        mainContainer.fillSuperView(widthPadding: ViewValues.normalPadding)
 
         mainContainer.addSubview(categoryMenuImageView)
         categoryMenuImageView.fillSuperView()
@@ -52,8 +51,12 @@ final class HomeItemCell: UICollectionViewCell {
 
         mainContainer.addSubview(titleLabel)
         titleLabel.setConstraints(
-            bottom: mainContainer.bottomAnchor, left: mainContainer.leftAnchor,
-            right: mainContainer.rightAnchor, pBottom: 8, pLeft: 8, pRight: 8
+            bottom: mainContainer.bottomAnchor,
+            left: mainContainer.leftAnchor,
+            right: mainContainer.rightAnchor,
+            pBottom: ViewValues.normalPadding,
+            pLeft: ViewValues.normalPadding,
+            pRight: ViewValues.normalPadding
         )
     }
 
@@ -61,7 +64,7 @@ final class HomeItemCell: UICollectionViewCell {
         let gradientMaskLayer = CAGradientLayer()
         gradientMaskLayer.frame = self.bounds
         gradientMaskLayer.colors = [UIColor.clear.cgColor, UIColor.darkGray.cgColor]
-        gradientMaskLayer.locations = [0.6, 0.9]
+        gradientMaskLayer.locations = [ViewValues.gradientTitleInit, ViewValues.gradientTitleEnd]
         mainContainer.layer.addSublayer(gradientMaskLayer)
     }
 

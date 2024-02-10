@@ -28,6 +28,10 @@ extension HomeCoordinator: HomeViewControllerCoordinator {
         switch model.title {
         case "characters":
             goToCharacters()
+        case "episodes":
+            goToEpisodes()
+        case "locations":
+            goToLocations()
         default:
             break
         }
@@ -35,5 +39,11 @@ extension HomeCoordinator: HomeViewControllerCoordinator {
     
     private func goToCharacters() {
         print("character screen")
+    }
+    private func goToLocations() {
+        print("locations screen")
+    }
+    private func goToEpisodes() {
+        print("episodes screen")
     }
 }
