@@ -30,6 +30,10 @@
 		A8A6870D2B77CD4B002E38ED /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A6870C2B77CD4B002E38ED /* HomeViewModel.swift */; };
 		A8A6870F2B77CE9B002E38ED /* StateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A6870E2B77CE9B002E38ED /* StateController.swift */; };
 		A8A687112B77CFBC002E38ED /* HomeItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A687102B77CFBC002E38ED /* HomeItemViewModel.swift */; };
+		A8A687142B77DD07002E38ED /* ApiClientService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A687132B77DD07002E38ED /* ApiClientService.swift */; };
+		A8A687172B77DDA1002E38ED /* ApiClientServiceImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A687162B77DDA1002E38ED /* ApiClientServiceImplementation.swift */; };
+		A8A6871A2B77DE6B002E38ED /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A687192B77DE6B002E38ED /* ApiError.swift */; };
+		A8A6871D2B77E48A002E38ED /* HttpResponseStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A6871C2B77E48A002E38ED /* HttpResponseStatus.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +81,10 @@
 		A8A6870C2B77CD4B002E38ED /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		A8A6870E2B77CE9B002E38ED /* StateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateController.swift; sourceTree = "<group>"; };
 		A8A687102B77CFBC002E38ED /* HomeItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItemViewModel.swift; sourceTree = "<group>"; };
+		A8A687132B77DD07002E38ED /* ApiClientService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientService.swift; sourceTree = "<group>"; };
+		A8A687162B77DDA1002E38ED /* ApiClientServiceImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientServiceImplementation.swift; sourceTree = "<group>"; };
+		A8A687192B77DE6B002E38ED /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		A8A6871C2B77E48A002E38ED /* HttpResponseStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpResponseStatus.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +209,10 @@
 		A8A686D12B7633FA002E38ED /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				A8A6871B2B77E46F002E38ED /* StatusResponse */,
+				A8A687182B77DE50002E38ED /* Errors */,
+				A8A687152B77DD86002E38ED /* Implementations */,
+				A8A687122B77DCD9002E38ED /* ApiService */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -465,6 +477,38 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		A8A687122B77DCD9002E38ED /* ApiService */ = {
+			isa = PBXGroup;
+			children = (
+				A8A687132B77DD07002E38ED /* ApiClientService.swift */,
+			);
+			path = ApiService;
+			sourceTree = "<group>";
+		};
+		A8A687152B77DD86002E38ED /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				A8A687162B77DDA1002E38ED /* ApiClientServiceImplementation.swift */,
+			);
+			path = Implementations;
+			sourceTree = "<group>";
+		};
+		A8A687182B77DE50002E38ED /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				A8A687192B77DE6B002E38ED /* ApiError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		A8A6871B2B77E46F002E38ED /* StatusResponse */ = {
+			isa = PBXGroup;
+			children = (
+				A8A6871C2B77E48A002E38ED /* HttpResponseStatus.swift */,
+			);
+			path = StatusResponse;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -602,17 +646,21 @@
 				A8A686EA2B764426002E38ED /* Coordinator.swift in Sources */,
 				A8A687112B77CFBC002E38ED /* HomeItemViewModel.swift in Sources */,
 				A8A687002B77CA34002E38ED /* MenuRepository.swift in Sources */,
+				A8A687172B77DDA1002E38ED /* ApiClientServiceImplementation.swift in Sources */,
 				A8A6870D2B77CD4B002E38ED /* HomeViewModel.swift in Sources */,
 				A8A6870F2B77CE9B002E38ED /* StateController.swift in Sources */,
 				A8A686A22B7631FF002E38ED /* HomeController.swift in Sources */,
 				A8A687032B77CAA0002E38ED /* MenuItem.swift in Sources */,
 				A8A686ED2B7644A7002E38ED /* AppCoordinator.swift in Sources */,
 				A8A687062B77CB4A002E38ED /* MenuRepositoryImplementation.swift in Sources */,
+				A8A6871A2B77DE6B002E38ED /* ApiError.swift in Sources */,
 				A8A6869E2B7631FF002E38ED /* AppDelegate.swift in Sources */,
+				A8A6871D2B77E48A002E38ED /* HttpResponseStatus.swift in Sources */,
 				A8A686F32B7656C7002E38ED /* HomeFactory.swift in Sources */,
 				A8A686F82B766401002E38ED /* UIView+Constraints.swift in Sources */,
 				A8A686F12B765666002E38ED /* HomeCoordinator.swift in Sources */,
 				A8A686A02B7631FF002E38ED /* SceneDelegate.swift in Sources */,
+				A8A687142B77DD07002E38ED /* ApiClientService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
