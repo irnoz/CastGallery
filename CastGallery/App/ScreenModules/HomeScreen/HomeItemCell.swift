@@ -24,6 +24,14 @@ final class HomeItemCell: UICollectionViewCell {
         return imageView
     }()
 
+    private let titleLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = .white
+        label.text = "Category"
+        label.font = UIFont.preferredFont(forTextStyle: .headline)
+        return label
+    }()
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureUI()
@@ -39,8 +47,23 @@ final class HomeItemCell: UICollectionViewCell {
 
         mainContainer.addSubview(characterImage)
         characterImage.fillSuperView()
+
+        configureGradientForTitle()
+
+        mainContainer.addSubview(titleLabel)
+        titleLabel.setConstraints(
+            bottom: mainContainer.bottomAnchor, left: mainContainer.leftAnchor,
+            right: mainContainer.rightAnchor, pBottom: 8, pLeft: 8, pRight: 8
+        )
     }
 
+    private func configureGradientForTitle() {
+        let gradientMaskLayer = CAGradientLayer()
+        gradientMaskLayer.frame = self.bounds
+        gradientMaskLayer.colors = [UIColor.clear.cgColor, UIColor.darkGray.cgColor]
+        gradientMaskLayer.locations = [0.6, 0.9]
+        mainContainer.layer.addSublayer(gradientMaskLayer)
+    }
 }
 
 extension HomeItemCell: Reusable { }
