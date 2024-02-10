@@ -22,28 +22,18 @@ final class HomeCoordinator: Coordinator {
     }
 }
 
-// MARK: - toBeRemoved
 extension HomeCoordinator: HomeViewControllerCoordinator {
     func didSelectMenuCell(model: MenuItem) {
         switch model.title {
         case "characters":
-            goToCharacters()
-        case "episodes":
-            goToEpisodes()
-        case "locations":
-            goToLocations()
+            goToCharacters(urlList: model.url)
         default:
             break
         }
     }
     
-    private func goToCharacters() {
-        print("character screen")
-    }
-    private func goToLocations() {
-        print("locations screen")
-    }
-    private func goToEpisodes() {
-        print("episodes screen")
+    private func goToCharacters(urlList: String) {
+        let charactersCoordinator = homeFactory.makeCoordinatorCharacters(navigation: navigation, urlList: urlList)
+        charactersCoordinator.start()
     }
 }

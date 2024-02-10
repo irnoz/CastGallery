@@ -44,6 +44,8 @@
 		A8A6872F2B7813E8002E38ED /* AppLocalized.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A6872E2B7813E8002E38ED /* AppLocalized.swift */; };
 		A8A687312B7815EC002E38ED /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A687302B7815EC002E38ED /* Images.swift */; };
 		A8A687332B781B94002E38ED /* CharactersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A687322B781B94002E38ED /* CharactersFactory.swift */; };
+		A8A687362B781C5D002E38ED /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A687352B781C5D002E38ED /* CharactersViewController.swift */; };
+		A8A687382B781DBB002E38ED /* CharactersCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A687372B781DBB002E38ED /* CharactersCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +107,8 @@
 		A8A6872E2B7813E8002E38ED /* AppLocalized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLocalized.swift; sourceTree = "<group>"; };
 		A8A687302B7815EC002E38ED /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		A8A687322B781B94002E38ED /* CharactersFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersFactory.swift; sourceTree = "<group>"; };
+		A8A687352B781C5D002E38ED /* CharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewController.swift; sourceTree = "<group>"; };
+		A8A687372B781DBB002E38ED /* CharactersCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,7 +211,7 @@
 			children = (
 				A8A686E62B76412D002E38ED /* LaunchScreen */,
 				A8A686D62B76357F002E38ED /* CharacterDetail */,
-				A8A686D52B763564002E38ED /* RaMCharacters */,
+				A8A686D52B763564002E38ED /* Characters */,
 				A8A686D42B76342E002E38ED /* HomeScreen */,
 			);
 			path = ScreenModules;
@@ -264,11 +268,12 @@
 			path = HomeScreen;
 			sourceTree = "<group>";
 		};
-		A8A686D52B763564002E38ED /* RaMCharacters */ = {
+		A8A686D52B763564002E38ED /* Characters */ = {
 			isa = PBXGroup;
 			children = (
+				A8A687342B781C50002E38ED /* Presentation */,
 			);
-			path = RaMCharacters;
+			path = Characters;
 			sourceTree = "<group>";
 		};
 		A8A686D62B76357F002E38ED /* CharacterDetail */ = {
@@ -373,6 +378,7 @@
 			isa = PBXGroup;
 			children = (
 				A8A686F02B765666002E38ED /* HomeCoordinator.swift */,
+				A8A687372B781DBB002E38ED /* CharactersCoordinator.swift */,
 			);
 			path = CoordinatorScreens;
 			sourceTree = "<group>";
@@ -555,6 +561,14 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		A8A687342B781C50002E38ED /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				A8A687352B781C5D002E38ED /* CharactersViewController.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -691,6 +705,7 @@
 				A8A686FA2B7667DC002E38ED /* Reusable.swift in Sources */,
 				A8A687202B77E857002E38ED /* MenuDTO.swift in Sources */,
 				A8A687092B77CC12002E38ED /* LoadMenuUseCase.swift in Sources */,
+				A8A687382B781DBB002E38ED /* CharactersCoordinator.swift in Sources */,
 				A8A6872B2B780972002E38ED /* ViewVlaues.swift in Sources */,
 				A8A686EF2B764520002E38ED /* AppFactory.swift in Sources */,
 				A8A686EA2B764426002E38ED /* Coordinator.swift in Sources */,
@@ -709,6 +724,7 @@
 				A8A6869E2B7631FF002E38ED /* AppDelegate.swift in Sources */,
 				A8A687242B77E98A002E38ED /* PropertyIterator.swift in Sources */,
 				A8A6872F2B7813E8002E38ED /* AppLocalized.swift in Sources */,
+				A8A687362B781C5D002E38ED /* CharactersViewController.swift in Sources */,
 				A8A6871D2B77E48A002E38ED /* HttpResponseStatus.swift in Sources */,
 				A8A686F32B7656C7002E38ED /* HomeFactory.swift in Sources */,
 				A8A687222B77E913002E38ED /* MenuDto+Mapper.swift in Sources */,

@@ -10,6 +10,7 @@ import Combine
 
 protocol HomeFactory {
     func makeModule(coordinator: HomeViewControllerCoordinator) -> UIViewController
+    func makeCoordinatorCharacters(navigation: UINavigationController, urlList: String) -> Coordinator
 }
 
 struct HomeFactoryImplementation: HomeFactory {
@@ -23,6 +24,12 @@ struct HomeFactoryImplementation: HomeFactory {
         let homeController = HomeController(viewModel: homeViewModel, layout: makeLayout(), coordinator: coordinator)
         homeController.title = AppLocalized.appName
         return homeController
+    }
+
+    func makeCoordinatorCharacters(navigation: UINavigationController, urlList: String) -> Coordinator {
+        let charactersFactory = charactersFactoryImplementation()
+        let charactersCoordinator = CharactersCoordinator(navigation: navigation, charactersFactory: charactersFactory)
+        return charactersCoordinator
     }
 
     private func makeLayout() -> UICollectionViewFlowLayout {
