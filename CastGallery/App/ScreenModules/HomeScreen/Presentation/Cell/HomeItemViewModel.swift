@@ -5,7 +5,7 @@
 //  Created by Irakli Nozadze on 10.02.24.
 //
 
-struct HomeMenuItemViewModel {
+struct HomeItemViewModel {
     private let menuItem: MenuItem
 
     init(menuItem: MenuItem) {

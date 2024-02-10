@@ -6,13 +6,44 @@
 //
 
 import UIKit
+import Combine
 
 final class HomeController: UICollectionViewController {
 
+    private let viewModel: HomeViewModel
+    private var cancellable = Set<AnyCancellable>()
+    
+    init(viewModel: HomeViewModel, layout: UICollectionViewFlowLayout) {
+        self.viewModel = viewModel
+        super.init(collectionViewLayout: layout)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
         configureCollectionView()
+        stateController()
+        viewModel.viewDidLoad()
+    }
+
+    private func stateController() {
+        viewModel
+            .state
+            .receive(on: RunLoop.main)
+            .sink { state in
+            switch state {
+            case .succes:
+                self.collectionView.reloadData()
+            case .loading:
+                print("loading...")
+            case .fail(error: let error):
+                print("error", error)
+            }
+        }.store(in: &cancellable)
     }
 
     private func configureUI() {
@@ -26,7 +57,7 @@ final class HomeController: UICollectionViewController {
 
 extension HomeController {
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return viewModel.menuItemsCount
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -35,6 +66,9 @@ extension HomeController {
         else {
             return UICollectionViewCell()
         }
+
+        let viewModelCell = viewModel.getMenuItemViewModel(indexPath: indexPath)
+        cell.configData(viewModel: viewModelCell)
 
         return cell
     }

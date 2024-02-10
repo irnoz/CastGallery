@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 protocol HomeFactory {
     func makeModule() -> UIViewController
@@ -14,12 +15,16 @@ protocol HomeFactory {
 struct HomeFactoryImplementation: HomeFactory {
 
     func makeModule() -> UIViewController {
-        let homeController = HomeController(collectionViewLayout: makeLayout())
+        let menuRepository = MenuRepositoryImplementation()
+        let state = PassthroughSubject<StateController, Never>()
+        let loadMenuUsseCase = LoadMenuUseCaseImplementation(menuRepository: menuRepository)
+        let homeViewModel = HomeViewModelImplementation(state: state, loadMenuUseCase: loadMenuUsseCase)
+        let homeController = HomeController(viewModel: homeViewModel, layout: makeLayout())
         homeController.title = "Rick and Morty"
         return homeController
     }
 
-    private func makeLayout() -> UICollectionViewLayout {
+    private func makeLayout() -> UICollectionViewFlowLayout {
         let layout = UICollectionViewFlowLayout()
         let layoutWidth = (UIScreen.main.bounds.width - 16) / 2
         let layoutHeight = (UIScreen.main.bounds.width - 16) / 2

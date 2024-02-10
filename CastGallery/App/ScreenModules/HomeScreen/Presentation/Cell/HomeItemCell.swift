@@ -17,10 +17,10 @@ final class HomeItemCell: UICollectionViewCell {
         return view
     }()
 
-    private let characterImage: UIImageView = {
+    private let categoryMenuImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "default")
-        imageView.contentMode = .scaleAspectFit
+        imageView.contentMode = .scaleAspectFill
         return imageView
     }()
 
@@ -45,8 +45,8 @@ final class HomeItemCell: UICollectionViewCell {
         addSubview(mainContainer)
         mainContainer.fillSuperView(widthPadding: 8)
 
-        mainContainer.addSubview(characterImage)
-        characterImage.fillSuperView()
+        mainContainer.addSubview(categoryMenuImageView)
+        categoryMenuImageView.fillSuperView()
 
         configureGradientForTitle()
 
@@ -63,6 +63,11 @@ final class HomeItemCell: UICollectionViewCell {
         gradientMaskLayer.colors = [UIColor.clear.cgColor, UIColor.darkGray.cgColor]
         gradientMaskLayer.locations = [0.6, 0.9]
         mainContainer.layer.addSublayer(gradientMaskLayer)
+    }
+
+    func configData(viewModel: HomeItemViewModel) {
+        titleLabel.text = viewModel.title
+        categoryMenuImageView.image = UIImage(named: viewModel.imageName)
     }
 }
 

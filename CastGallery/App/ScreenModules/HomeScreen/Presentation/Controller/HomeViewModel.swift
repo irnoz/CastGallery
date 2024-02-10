@@ -8,16 +8,16 @@
 import Combine
 import Foundation
 
-protocol HomeViewMode {
+protocol HomeViewModel {
     var state: PassthroughSubject<StateController, Never> { get }
     var menuItemsCount: Int { get }
 
     func viewDidLoad()
-    func getMenuItemViewModel(indexPath: IndexPath) -> HomeMenuItemViewModel
+    func getMenuItemViewModel(indexPath: IndexPath) -> HomeItemViewModel
     func getMenuItem(indexPath: IndexPath) -> MenuItem
 }
 
-final class HomeViewModeImplementation: HomeViewMode {
+final class HomeViewModelImplementation: HomeViewModel {
     var state: PassthroughSubject<StateController, Never>
 
     var menuItemsCount: Int {
@@ -36,19 +36,23 @@ final class HomeViewModeImplementation: HomeViewMode {
         state.send(.loading)
         Task {
             let result = await loadMenuUseCase.execute()
-            switch result {
-            case .success(let menuItems):
-                self.menuItems = menuItems
-                state.send(.succes)
-            case .failure(let error):
-                state.send(.fail(error: error.localizedDescription))
-            }
+            UpdateUI(result: result)
         }
     }
 
-    func getMenuItemViewModel(indexPath: IndexPath) -> HomeMenuItemViewModel {
+    private func UpdateUI(result: Result<[MenuItem], Error>) {
+        switch result {
+        case .success(let menuItems):
+            self.menuItems = menuItems
+            state.send(.succes)
+        case .failure(let error):
+            state.send(.fail(error: error.localizedDescription))
+        }
+    }
+
+    func getMenuItemViewModel(indexPath: IndexPath) -> HomeItemViewModel {
         let menuItem = menuItems[indexPath.row]
-        return HomeMenuItemViewModel(menuItem: menuItem)
+        return HomeItemViewModel(menuItem: menuItem)
     }
 
     func getMenuItem(indexPath: IndexPath) -> MenuItem {

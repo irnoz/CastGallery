@@ -29,7 +29,7 @@
 		A8A687092B77CC12002E38ED /* LoadMenuUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A687082B77CC12002E38ED /* LoadMenuUseCase.swift */; };
 		A8A6870D2B77CD4B002E38ED /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A6870C2B77CD4B002E38ED /* HomeViewModel.swift */; };
 		A8A6870F2B77CE9B002E38ED /* StateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A6870E2B77CE9B002E38ED /* StateController.swift */; };
-		A8A687112B77CFBC002E38ED /* HomeMenuItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A687102B77CFBC002E38ED /* HomeMenuItemViewModel.swift */; };
+		A8A687112B77CFBC002E38ED /* HomeItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A687102B77CFBC002E38ED /* HomeItemViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,7 +76,7 @@
 		A8A687082B77CC12002E38ED /* LoadMenuUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadMenuUseCase.swift; sourceTree = "<group>"; };
 		A8A6870C2B77CD4B002E38ED /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		A8A6870E2B77CE9B002E38ED /* StateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateController.swift; sourceTree = "<group>"; };
-		A8A687102B77CFBC002E38ED /* HomeMenuItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuItemViewModel.swift; sourceTree = "<group>"; };
+		A8A687102B77CFBC002E38ED /* HomeItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeItemViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -460,7 +460,7 @@
 			isa = PBXGroup;
 			children = (
 				A8A686F52B76620C002E38ED /* HomeItemCell.swift */,
-				A8A687102B77CFBC002E38ED /* HomeMenuItemViewModel.swift */,
+				A8A687102B77CFBC002E38ED /* HomeItemViewModel.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -600,7 +600,7 @@
 				A8A687092B77CC12002E38ED /* LoadMenuUseCase.swift in Sources */,
 				A8A686EF2B764520002E38ED /* AppFactory.swift in Sources */,
 				A8A686EA2B764426002E38ED /* Coordinator.swift in Sources */,
-				A8A687112B77CFBC002E38ED /* HomeMenuItemViewModel.swift in Sources */,
+				A8A687112B77CFBC002E38ED /* HomeItemViewModel.swift in Sources */,
 				A8A687002B77CA34002E38ED /* MenuRepository.swift in Sources */,
 				A8A6870D2B77CD4B002E38ED /* HomeViewModel.swift in Sources */,
 				A8A6870F2B77CE9B002E38ED /* StateController.swift in Sources */,
