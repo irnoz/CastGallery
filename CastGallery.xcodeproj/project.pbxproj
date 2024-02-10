@@ -38,6 +38,7 @@
 		A8A687222B77E913002E38ED /* MenuDto+Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A687212B77E913002E38ED /* MenuDto+Mapper.swift */; };
 		A8A687242B77E98A002E38ED /* PropertyIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A687232B77E98A002E38ED /* PropertyIterator.swift */; };
 		A8A687262B77EBD2002E38ED /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A687252B77EBD2002E38ED /* Endpoint.swift */; };
+		A8A687292B7808EB002E38ED /* SpinnerDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A687282B7808EB002E38ED /* SpinnerDisplayable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		A8A687212B77E913002E38ED /* MenuDto+Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MenuDto+Mapper.swift"; sourceTree = "<group>"; };
 		A8A687232B77E98A002E38ED /* PropertyIterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyIterator.swift; sourceTree = "<group>"; };
 		A8A687252B77EBD2002E38ED /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		A8A687282B7808EB002E38ED /* SpinnerDisplayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerDisplayable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +206,7 @@
 		A8A686D02B7633E6002E38ED /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				A8A687272B7808D9002E38ED /* Components */,
 				A8A686E02B763799002E38ED /* Localize */,
 				A8A686DF2B76377D002E38ED /* StateController */,
 				A8A686DE2B76376E002E38ED /* Utils */,
@@ -529,6 +532,14 @@
 			path = DTO;
 			sourceTree = "<group>";
 		};
+		A8A687272B7808D9002E38ED /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A8A687282B7808EB002E38ED /* SpinnerDisplayable.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -660,6 +671,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8A687262B77EBD2002E38ED /* Endpoint.swift in Sources */,
+				A8A687292B7808EB002E38ED /* SpinnerDisplayable.swift in Sources */,
 				A8A686F62B76620C002E38ED /* HomeItemCell.swift in Sources */,
 				A8A686FA2B7667DC002E38ED /* Reusable.swift in Sources */,
 				A8A687202B77E857002E38ED /* MenuDTO.swift in Sources */,
