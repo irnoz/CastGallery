@@ -14,14 +14,14 @@ extension UIView {
         left: NSLayoutXAxisAnchor? = nil, right: NSLayoutXAxisAnchor? = nil,
         pTop: CGFloat = .zero, pBottom: CGFloat = .zero, pLeft: CGFloat = .zero, pRight: CGFloat = .zero
     ) {
-        translatesAutoresizingMaskIntoConstraints = true
+        translatesAutoresizingMaskIntoConstraints = false
         
         if let top = top {
             topAnchor.constraint(equalTo: top, constant: pTop).isActive = true
         }
         
         if let bottom = bottom {
-            bottomAnchor.constraint(equalTo: bottom, constant: pBottom).isActive = true
+            bottomAnchor.constraint(equalTo: bottom, constant: -pBottom).isActive = true
         }
         
         if let left = left {
@@ -29,7 +29,7 @@ extension UIView {
         }
         
         if let right = right {
-            rightAnchor.constraint(equalTo: right, constant: pRight).isActive = true
+            rightAnchor.constraint(equalTo: right, constant: -pRight).isActive = true
         }
     }
     
