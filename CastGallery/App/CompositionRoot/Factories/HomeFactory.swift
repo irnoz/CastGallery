@@ -9,18 +9,18 @@ import UIKit
 import Combine
 
 protocol HomeFactory {
-    func makeModule() -> UIViewController
+    func makeModule(coordinator: HomeViewControllerCoordinator) -> UIViewController
 }
 
 struct HomeFactoryImplementation: HomeFactory {
 
-    func makeModule() -> UIViewController {
+    func makeModule(coordinator: HomeViewControllerCoordinator) -> UIViewController {
         let apiClientService = ApiClientServiceImplementation()
         let menuRepository = MenuRepositoryImplementation(apiClientService: apiClientService, urlList: Endpoint.baseUrl)
         let state = PassthroughSubject<StateController, Never>()
-        let loadMenuUsseCase = LoadMenuUseCaseImplementation(menuRepository: menuRepository)
-        let homeViewModel = HomeViewModelImplementation(state: state, loadMenuUseCase: loadMenuUsseCase)
-        let homeController = HomeController(viewModel: homeViewModel, layout: makeLayout())
+        let loadMenuUseCase = LoadMenuUseCaseImplementation(menuRepository: menuRepository)
+        let homeViewModel = HomeViewModelImplementation(state: state, loadMenuUseCase: loadMenuUseCase)
+        let homeController = HomeController(viewModel: homeViewModel, layout: makeLayout(), coordinator: coordinator)
         homeController.title = "Rick and Morty"
         return homeController
     }
