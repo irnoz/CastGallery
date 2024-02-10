@@ -37,6 +37,7 @@
 		A8A687202B77E857002E38ED /* MenuDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A6871F2B77E857002E38ED /* MenuDTO.swift */; };
 		A8A687222B77E913002E38ED /* MenuDto+Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A687212B77E913002E38ED /* MenuDto+Mapper.swift */; };
 		A8A687242B77E98A002E38ED /* PropertyIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A687232B77E98A002E38ED /* PropertyIterator.swift */; };
+		A8A687262B77EBD2002E38ED /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A687252B77EBD2002E38ED /* Endpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		A8A6871F2B77E857002E38ED /* MenuDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDTO.swift; sourceTree = "<group>"; };
 		A8A687212B77E913002E38ED /* MenuDto+Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MenuDto+Mapper.swift"; sourceTree = "<group>"; };
 		A8A687232B77E98A002E38ED /* PropertyIterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyIterator.swift; sourceTree = "<group>"; };
+		A8A687252B77EBD2002E38ED /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +221,7 @@
 				A8A687182B77DE50002E38ED /* Errors */,
 				A8A687152B77DD86002E38ED /* Implementations */,
 				A8A687122B77DCD9002E38ED /* ApiService */,
+				A8A687252B77EBD2002E38ED /* Endpoint.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -656,6 +659,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8A687262B77EBD2002E38ED /* Endpoint.swift in Sources */,
 				A8A686F62B76620C002E38ED /* HomeItemCell.swift in Sources */,
 				A8A686FA2B7667DC002E38ED /* Reusable.swift in Sources */,
 				A8A687202B77E857002E38ED /* MenuDTO.swift in Sources */,

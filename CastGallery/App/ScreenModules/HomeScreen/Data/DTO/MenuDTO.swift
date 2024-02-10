@@ -6,7 +6,7 @@
 //
 
 struct MenuDTO: Decodable {
-    let character: String
+    let characters: String
     let locations: String
     let episodes: String
 }
