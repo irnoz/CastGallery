@@ -12,13 +12,13 @@ protocol HomeFactory {
 }
 
 struct HomeFactoryImplementation: HomeFactory {
-    
+
     func makeModule() -> UIViewController {
         let homeController = HomeController(collectionViewLayout: makeLayout())
         homeController.title = "Rick and Morty"
         return homeController
     }
-    
+
     private func makeLayout() -> UICollectionViewLayout {
         let layout = UICollectionViewFlowLayout()
         let layoutWidth = (UIScreen.main.bounds.width - 16) / 2
