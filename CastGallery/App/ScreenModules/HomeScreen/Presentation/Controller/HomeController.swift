@@ -42,7 +42,7 @@ final class HomeController: UICollectionViewController {
             case .loading:
                 self?.showSpinner()
             case .fail(error: let error):
-                print("error", error)
+                self?.presentAlert(message: error, title: "Error")
             }
         }.store(in: &cancellable)
     }
@@ -77,3 +77,4 @@ extension HomeController {
 
 extension HomeController: SpinnerDisplayable { }
 
+extension HomeController: MessageDisplayable { }
