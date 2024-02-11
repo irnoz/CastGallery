@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 protocol CharactersViewControllerCoordinator {
     func didSelectMenuCell(urlDetail: String)
@@ -13,7 +14,20 @@ protocol CharactersViewControllerCoordinator {
 
 final class CharactersViewController: UITableViewController {
 
+    // MARK: - Private Properties
+    private let viewModel: CharactersViewModel
+    private let chancellable = Set<AnyCancellable>()
+
     // MARK: - Life Cycle
+    init(viewModel: CharactersViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         configTableView()

@@ -27,7 +27,7 @@ struct HomeFactoryImplementation: HomeFactory {
     }
 
     func makeCoordinatorCharacters(navigation: UINavigationController, urlList: String) -> Coordinator {
-        let charactersFactory = charactersFactoryImplementation()
+        let charactersFactory = charactersFactoryImplementation(urlList: urlList)
         let charactersCoordinator = CharactersCoordinator(navigation: navigation, charactersFactory: charactersFactory)
         return charactersCoordinator
     }
