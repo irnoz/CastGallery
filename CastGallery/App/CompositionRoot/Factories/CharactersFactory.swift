@@ -15,14 +15,15 @@ protocol CharactersFactory {
 struct charactersFactoryImplementation: CharactersFactory {
 
     let urlList: String
+    let appContainer: AppContainer
 
     func makeModule(coordinator: CharactersViewControllerCoordinator) -> UIViewController {
         let state = PassthroughSubject<StateController, Never>()
-        let apiClient = ApiClientServiceImplementation()
+        let apiClient = appContainer.apiClient
         let characterRepository = CharactersRepositoryImplementation(apiClient: apiClient)
         let loadCharactersUseCase = LoadCharactersUseCaseImplementation(characterRepository: characterRepository,url: urlList)
         let lastPageValidationUseCase = LastPageValidationUseCaseImplementation()
-        let viewModel = CharactersViewModelImplementation(state: state, loadCharactersUseCase: loadCharactersUseCase, lastPageValidationUseCase: lastPageValidationUseCase)
+        let viewModel = CharactersViewModelImplementation(state: state, loadCharactersUseCase: loadCharactersUseCase, lastPageValidationUseCase: lastPageValidationUseCase, imageDataUseCase: appContainer.getDataImageUseCase())
         let controller = CharactersViewController(viewModel: viewModel)
         controller.navigationController?.navigationBar.prefersLargeTitles = true
         controller.title = "Characters"

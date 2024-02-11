@@ -74,6 +74,8 @@
 		A8A6877A2B793402002E38ED /* ImageDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A687792B793402002E38ED /* ImageDataRepository.swift */; };
 		A8A6877D2B7934C2002E38ED /* ImageDataRepositoryImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A6877C2B7934C2002E38ED /* ImageDataRepositoryImplementation.swift */; };
 		A8A687802B793652002E38ED /* ImageDataUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A6877F2B793652002E38ED /* ImageDataUseCase.swift */; };
+		A8A687822B7938EF002E38ED /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A687812B7938EF002E38ED /* AppContainer.swift */; };
+		A8A687842B793F8B002E38ED /* UIImageView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A687832B793F8B002E38ED /* UIImageView+Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -165,6 +167,8 @@
 		A8A687792B793402002E38ED /* ImageDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataRepository.swift; sourceTree = "<group>"; };
 		A8A6877C2B7934C2002E38ED /* ImageDataRepositoryImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataRepositoryImplementation.swift; sourceTree = "<group>"; };
 		A8A6877F2B793652002E38ED /* ImageDataUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataUseCase.swift; sourceTree = "<group>"; };
+		A8A687812B7938EF002E38ED /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
+		A8A687832B793F8B002E38ED /* UIImageView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Utils.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -348,6 +352,7 @@
 				A8A686F72B766401002E38ED /* UIView+Constraints.swift */,
 				A8A687422B78A3FC002E38ED /* String+Empty.swift */,
 				A8A6876E2B78D0B6002E38ED /* UITableViewController+SpinnerLast.swift */,
+				A8A687832B793F8B002E38ED /* UIImageView+Utils.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -470,6 +475,7 @@
 		A8A686E52B7640EB002E38ED /* DIContainer */ = {
 			isa = PBXGroup;
 			children = (
+				A8A687812B7938EF002E38ED /* AppContainer.swift */,
 			);
 			path = DIContainer;
 			sourceTree = "<group>";
@@ -923,6 +929,7 @@
 				A8A687112B77CFBC002E38ED /* HomeItemViewModel.swift in Sources */,
 				A8A687332B781B94002E38ED /* CharactersFactory.swift in Sources */,
 				A8A6876A2B78BF62002E38ED /* CharacterItemViewModel.swift in Sources */,
+				A8A687822B7938EF002E38ED /* AppContainer.swift in Sources */,
 				A8A687002B77CA34002E38ED /* MenuRepository.swift in Sources */,
 				A8A687172B77DDA1002E38ED /* ApiClientServiceImplementation.swift in Sources */,
 				A8A6870D2B77CD4B002E38ED /* HomeViewModel.swift in Sources */,
@@ -945,6 +952,7 @@
 				A8A687242B77E98A002E38ED /* PropertyIterator.swift in Sources */,
 				A8A6875C2B78AC17002E38ED /* Info.swift in Sources */,
 				A8A6872F2B7813E8002E38ED /* AppLocalized.swift in Sources */,
+				A8A687842B793F8B002E38ED /* UIImageView+Utils.swift in Sources */,
 				A8A6877D2B7934C2002E38ED /* ImageDataRepositoryImplementation.swift in Sources */,
 				A8A687612B78ADC4002E38ED /* ResultCharactersDTO+Mapping.swift in Sources */,
 				A8A6873B2B78324F002E38ED /* CharacterItemTableViewCell.swift in Sources */,

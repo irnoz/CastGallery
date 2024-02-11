@@ -7,4 +7,5 @@
 
 struct Images {
     static let defaultImage = "default"
+    static let loadingImage = "loading"
 }
