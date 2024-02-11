@@ -53,7 +53,7 @@ final class CharacterItemTableViewCell: UITableViewCell {
     private let statusLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.preferredFont(forTextStyle: .callout)
-        label.text = "🪦"
+        label.text = "dead"
         return label
     }()
     
