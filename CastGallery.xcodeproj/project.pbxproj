@@ -67,6 +67,7 @@
 		A8A6876A2B78BF62002E38ED /* CharacterItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A687692B78BF62002E38ED /* CharacterItemViewModel.swift */; };
 		A8A6876D2B78C321002E38ED /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A6876C2B78C321002E38ED /* BaseViewModel.swift */; };
 		A8A6876F2B78D0B6002E38ED /* UITableViewController+SpinnerLast.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A6876E2B78D0B6002E38ED /* UITableViewController+SpinnerLast.swift */; };
+		A8A687712B790844002E38ED /* LastPageValidationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A687702B790844002E38ED /* LastPageValidationUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,6 +152,7 @@
 		A8A687692B78BF62002E38ED /* CharacterItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterItemViewModel.swift; sourceTree = "<group>"; };
 		A8A6876C2B78C321002E38ED /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		A8A6876E2B78D0B6002E38ED /* UITableViewController+SpinnerLast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewController+SpinnerLast.swift"; sourceTree = "<group>"; };
+		A8A687702B790844002E38ED /* LastPageValidationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastPageValidationUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -706,6 +708,7 @@
 			isa = PBXGroup;
 			children = (
 				A8A687632B78BC1F002E38ED /* LoadCharactersUseCase.swift */,
+				A8A687702B790844002E38ED /* LastPageValidationUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -913,6 +916,7 @@
 				A8A687222B77E913002E38ED /* MenuDto+Mapper.swift in Sources */,
 				A8A6874D2B78A89E002E38ED /* ResultCharactersDTO.swift in Sources */,
 				A8A686F82B766401002E38ED /* UIView+Constraints.swift in Sources */,
+				A8A687712B790844002E38ED /* LastPageValidationUseCase.swift in Sources */,
 				A8A687682B78BEC2002E38ED /* CharactersViewModel.swift in Sources */,
 				A8A686F12B765666002E38ED /* HomeCoordinator.swift in Sources */,
 				A8A686A02B7631FF002E38ED /* SceneDelegate.swift in Sources */,

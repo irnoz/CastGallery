@@ -20,8 +20,9 @@ struct charactersFactoryImplementation: CharactersFactory {
         let state = PassthroughSubject<StateController, Never>()
         let apiClient = ApiClientServiceImplementation()
         let characterRepository = CharactersRepositoryImplementation(apiClient: apiClient)
-        let loadCharactersUseCase = LoadCharactersUseCaseImplementation(characterRepository: characterRepository, url: urlList)
-        let viewModel = CharactersViewModelImplementation(state: state, loadCharactersUseCase: loadCharactersUseCase)
+        let loadCharactersUseCase = LoadCharactersUseCaseImplementation(characterRepository: characterRepository,url: urlList)
+        let lastPageValidationUseCase = LastPageValidationUseCaseImplementation()
+        let viewModel = CharactersViewModelImplementation(state: state, loadCharactersUseCase: loadCharactersUseCase, lastPageValidationUseCase: lastPageValidationUseCase)
         let controller = CharactersViewController(viewModel: viewModel)
         controller.navigationController?.navigationBar.prefersLargeTitles = true
         controller.title = "Characters"

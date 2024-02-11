@@ -57,7 +57,7 @@ final class CharactersViewController: UITableViewController {
                 case .loading:
                     break
                 case .fail(error: let error):
-                    self?.presentAlert(message: "error", title: error)
+                    self?.presentAlert(message: error, title: AppLocalized.error)
                 }
             }
             .store(in: &cancellable)
@@ -80,11 +80,7 @@ extension CharactersViewController {
     }
 
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if !viewModel.lastPage {
-            tableView.tableFooterView?.isHidden = false
-        } else {
-            tableView.tableFooterView?.isHidden = true
-        }
+        tableView.tableFooterView?.isHidden = viewModel.lastPage
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
