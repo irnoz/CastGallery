@@ -9,6 +9,7 @@ import Combine
 
 protocol CharactersViewModel: BaseViewModel {
     var characterItemsCount: Int { get }
+    var lastPage: Bool { get }
 
     func getItemMenuViewModel(row: Int) -> CharacterItemViewModel
     func getUrlList(row: Int) -> String
@@ -16,6 +17,7 @@ protocol CharactersViewModel: BaseViewModel {
 
 final class CharactersViewModelImplementation: CharactersViewModel {
     var state: PassthroughSubject<StateController, Never>
+    var lastPage: Bool = false
     var characterItemsCount: Int {
         characters.count
     }

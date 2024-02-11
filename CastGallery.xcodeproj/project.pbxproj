@@ -66,6 +66,7 @@
 		A8A687682B78BEC2002E38ED /* CharactersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A687672B78BEC2002E38ED /* CharactersViewModel.swift */; };
 		A8A6876A2B78BF62002E38ED /* CharacterItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A687692B78BF62002E38ED /* CharacterItemViewModel.swift */; };
 		A8A6876D2B78C321002E38ED /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A6876C2B78C321002E38ED /* BaseViewModel.swift */; };
+		A8A6876F2B78D0B6002E38ED /* UITableViewController+SpinnerLast.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A6876E2B78D0B6002E38ED /* UITableViewController+SpinnerLast.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,6 +150,7 @@
 		A8A687672B78BEC2002E38ED /* CharactersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewModel.swift; sourceTree = "<group>"; };
 		A8A687692B78BF62002E38ED /* CharacterItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterItemViewModel.swift; sourceTree = "<group>"; };
 		A8A6876C2B78C321002E38ED /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		A8A6876E2B78D0B6002E38ED /* UITableViewController+SpinnerLast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewController+SpinnerLast.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -330,6 +332,7 @@
 			children = (
 				A8A686F72B766401002E38ED /* UIView+Constraints.swift */,
 				A8A687422B78A3FC002E38ED /* String+Empty.swift */,
+				A8A6876E2B78D0B6002E38ED /* UITableViewController+SpinnerLast.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -887,6 +890,7 @@
 				A8A687432B78A3FC002E38ED /* String+Empty.swift in Sources */,
 				A8A6870F2B77CE9B002E38ED /* StateController.swift in Sources */,
 				A8A686A22B7631FF002E38ED /* HomeController.swift in Sources */,
+				A8A6876F2B78D0B6002E38ED /* UITableViewController+SpinnerLast.swift in Sources */,
 				A8A6875A2B78AB7C002E38ED /* CharactersRepository.swift in Sources */,
 				A8A687032B77CAA0002E38ED /* MenuItem.swift in Sources */,
 				A8A686ED2B7644A7002E38ED /* AppCoordinator.swift in Sources */,

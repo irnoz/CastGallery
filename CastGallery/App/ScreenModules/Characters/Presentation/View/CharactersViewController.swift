@@ -14,9 +14,11 @@ protocol CharactersViewControllerCoordinator {
 
 final class CharactersViewController: UITableViewController {
 
+    // MARK: - Public Properties
+    private var cancellable = Set<AnyCancellable>()
+
     // MARK: - Private Properties
     private let viewModel: CharactersViewModel
-    private let chancellable = Set<AnyCancellable>()
 
     // MARK: - Life Cycle
     init(viewModel: CharactersViewModel) {
@@ -30,7 +32,9 @@ final class CharactersViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.viewDidLoad()
         configTableView()
+        stateController()
     }
 
     // MARK: - Helpers
@@ -39,6 +43,24 @@ final class CharactersViewController: UITableViewController {
         tableView.register(
             CharacterItemTableViewCell.self,
             forCellReuseIdentifier: CharacterItemTableViewCell.reuseIdentifier)
+        addSpinerLastCell()
+    }
+    
+    private func stateController() {
+        viewModel
+            .state
+            .receive(on: RunLoop.main)
+            .sink { [weak self] state in
+                switch state {
+                case .succes:
+                    self?.tableView.reloadData()
+                case .loading:
+                    break
+                case .fail(error: let error):
+                    self?.presentAlert(message: "error", title: error)
+                }
+            }
+            .store(in: &cancellable)
     }
 }
 
@@ -51,10 +73,23 @@ extension CharactersViewController {
         ) as? CharacterItemTableViewCell else {
             return UITableViewCell()
         }
+        let row = indexPath.row
+        let itemViewModel = viewModel.getItemMenuViewModel(row: row)
+        cell.configureData(viewModel: itemViewModel)
         return cell
     }
 
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if !viewModel.lastPage {
+            tableView.tableFooterView?.isHidden = false
+        } else {
+            tableView.tableFooterView?.isHidden = true
+        }
+    }
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return viewModel.characterItemsCount
     }
 }
+
+extension CharactersViewController: MessageDisplayable { }

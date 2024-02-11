@@ -68,7 +68,7 @@ final class HomeItemCell: UICollectionViewCell {
         mainContainer.layer.addSublayer(gradientMaskLayer)
     }
 
-    func configData(viewModel: HomeItemViewModel) {
+    func configureData(viewModel: HomeItemViewModel) {
         titleLabel.text = viewModel.title
         categoryMenuImageView.image = UIImage(named: viewModel.imageName)
     }

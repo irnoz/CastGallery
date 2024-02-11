@@ -12,7 +12,7 @@ struct CharacterItemViewModel {
         self.character = character
     }
 
-    var naim: String {
+    var name: String {
         character.name
     }
 

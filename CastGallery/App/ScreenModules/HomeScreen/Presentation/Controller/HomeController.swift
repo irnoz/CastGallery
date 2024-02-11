@@ -75,7 +75,7 @@ extension HomeController {
         }
 
         let viewModelCell = viewModel.getMenuItemViewModel(indexPath: indexPath)
-        cell.configData(viewModel: viewModelCell)
+        cell.configureData(viewModel: viewModelCell)
 
         return cell
     }
