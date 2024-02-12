@@ -17,7 +17,7 @@ final class CharacterDetailViewController: UIViewController {
     private var cancellable = Set<AnyCancellable>()
     private let viewModel: CharacterDetailViewModel
     private let coordinator: CharacterDetailViewControllerCoordinator
-    
+
     private let characterImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.addDefaultImage()
@@ -25,14 +25,14 @@ final class CharacterDetailViewController: UIViewController {
         imageView.setHeightConstraint(with: UIScreen.main.bounds.width)
         return imageView
     }()
-    
+
     private let containerView: UIView = {
         let view = UIView()
         view.backgroundColor = .systemBackground
         view.layer.cornerRadius = ViewValues.defaultCornerRadius * ViewValues.multiplierTwo
         return view
     }()
-    
+
     private let nameLabel: UILabel = {
         let label = UILabel()
         label.text = "Name: NA"
@@ -40,31 +40,25 @@ final class CharacterDetailViewController: UIViewController {
         label.textAlignment = .center
         return label
     }()
-    
+
     private lazy var statusLabel: UILabel = makeGrayLabel(text: "Status: NA")
-    
     private lazy var specieLabel: UILabel = makeGrayLabel(text: "Specie: NA")
-    
     private lazy var genderLabel: UILabel = makeGrayLabel(text: "Gender: NA")
-    
     private lazy var originLabel: UILabel = makeGrayLabel(text: "Origin: NA")
-    
     private lazy var locationLabel: UILabel = makeGrayLabel(text: "Location: NA")
-    
-    private lazy var episodesButton: UIButton = makeExpandableButton(
-        title: "Episodes: ", subTitle: "NA")
-    
+    private lazy var episodesButton: UIButton = makeExpandableButton(title: "Episodes:")
+
     // MARK: - Life Cycle
     init(viewModel: CharacterDetailViewModel, coordinator: CharacterDetailViewControllerCoordinator) {
         self.viewModel = viewModel
         self.coordinator = coordinator
         super.init(nibName: nil, bundle: nil)
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
@@ -72,17 +66,17 @@ final class CharacterDetailViewController: UIViewController {
         configButton()
         viewModel.viewDidLoad()
     }
-    
+
     // MARK: - Helpers
     private func configureUI() {
         view.backgroundColor = .systemBackground
         navigationController?.navigationBar.prefersLargeTitles = false
-        
+
         view.addSubview(characterImageView)
         characterImageView.setConstraints(
             top: view.safeAreaLayoutGuide.topAnchor,
             left: view.leftAnchor, right: view.rightAnchor)
-        
+
         view.addSubview(containerView)
         containerView.setConstraints(
             top: characterImageView.bottomAnchor,
@@ -91,53 +85,53 @@ final class CharacterDetailViewController: UIViewController {
             right: view.rightAnchor,
             pTop: ViewValues.containerDetailPadding
         )
-        
+
         containerView.addSubview(nameLabel)
         nameLabel.setConstraints(
             top: containerView.topAnchor,
             left: containerView.leftAnchor,
             right: containerView.rightAnchor,
             pTop: ViewValues.normalPadding)
-        
+
         containerView.addSubview(statusLabel)
         statusLabel.setConstraints(
             top: nameLabel.bottomAnchor,
             left: containerView.leftAnchor,
             right: containerView.rightAnchor,
             pTop: ViewValues.smallPadding)
-        
+
         containerView.addSubview(specieLabel)
         specieLabel.setConstraints(
             top: statusLabel.bottomAnchor,
             left: containerView.leftAnchor,
             right: containerView.rightAnchor,
             pTop: ViewValues.smallPadding)
-        
+
         containerView.addSubview(genderLabel)
         genderLabel.setConstraints(
             top: specieLabel.bottomAnchor,
             left: containerView.leftAnchor,
             right: containerView.rightAnchor,
             pTop: ViewValues.smallPadding)
-        
+
         containerView.addSubview(originLabel)
         originLabel.setConstraints(
             top: genderLabel.bottomAnchor,
             left: containerView.leftAnchor,
             right: containerView.rightAnchor,
             pTop: ViewValues.smallPadding)
-        
-        
+
         containerView.addSubview(locationLabel)
         locationLabel.setConstraints(
             top: originLabel.bottomAnchor,
             left: containerView.leftAnchor,
             right: containerView.rightAnchor,
             pTop: ViewValues.smallPadding)
-        
-        let buttonStackView = UIStackView(arrangedSubviews: [episodesButton])
+
+        let buttonStackView = UIStackView(arrangedSubviews: [episodesButton, nameLabel])
         buttonStackView.axis = .vertical
         buttonStackView.spacing = ViewValues.normalPadding
+        
         containerView.addSubview(buttonStackView)
         buttonStackView.setConstraints(
             top: locationLabel.bottomAnchor,
@@ -147,7 +141,7 @@ final class CharacterDetailViewController: UIViewController {
             pLeft: ViewValues.doublePadding,
             pRight: ViewValues.doublePadding)
     }
-    
+
     private func stateController() {
         viewModel
             .state
@@ -164,7 +158,7 @@ final class CharacterDetailViewController: UIViewController {
                 }
             }.store(in: &cancellable)
     }
-    
+
     private func configData() {
         nameLabel.text = viewModel.name
         statusLabel.text = viewModel.status
@@ -175,11 +169,11 @@ final class CharacterDetailViewController: UIViewController {
         characterImageView.setImageFromData(data: viewModel.imageData)
 //        episodesButton.configuration?.subtitle = viewModel.episodes
     }
-    
+
     private func configButton() {
         episodesButton.addTarget(self, action: #selector(didTapExpendableButton), for: .touchUpInside)
     }
-    
+
     private func makeGrayLabel(text: String) -> UILabel {
         let label = UILabel()
         label.text = text
@@ -188,12 +182,11 @@ final class CharacterDetailViewController: UIViewController {
         label.textAlignment = .center
         return label
     }
-    
-    private func makeExpandableButton(title: String, subTitle: String) -> UIButton {
+
+    private func makeExpandableButton(title: String) -> UIButton {
         let button = UIButton(type: .system)
         var configuration = UIButton.Configuration.filled()
         configuration.title = title
-        configuration.subtitle = subTitle
         configuration.buttonSize = .small
         configuration.titleAlignment = .center
         configuration.cornerStyle = .large
@@ -202,17 +195,11 @@ final class CharacterDetailViewController: UIViewController {
             outgoing.font = UIFont.preferredFont(forTextStyle: .headline)
             return outgoing
         }
-        
-        configuration.subtitleTextAttributesTransformer = UIConfigurationTextAttributesTransformer { incoming in
-            var outgoing = incoming
-            outgoing.font = UIFont.preferredFont(forTextStyle: .subheadline)
-            return outgoing
-        }
-        
+
         button.configuration = configuration
         return button
     }
-    
+
     // MARK: - Actions
     @objc func didTapExpendableButton() {
         print("expand episodes button")

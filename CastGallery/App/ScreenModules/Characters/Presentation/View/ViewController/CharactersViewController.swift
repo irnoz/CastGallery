@@ -88,7 +88,7 @@ extension CharactersViewController: UISearchResultsUpdating, UISearchControllerD
     }
     
     func searchBarBookmarkButtonClicked(_ searchBar: UISearchBar) {
-        print("Search bar button called!")
+        print("Search bar filter button clicked!")
     }
 }
 

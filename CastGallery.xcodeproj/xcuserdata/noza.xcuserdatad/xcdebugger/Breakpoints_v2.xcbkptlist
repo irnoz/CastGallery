@@ -30,8 +30,8 @@
             filePath = "CastGallery/App/ScreenModules/CharacterDetail/Presentation/View/CharacterDetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "176"
-            endingLineNumber = "176"
+            startingLineNumber = "170"
+            endingLineNumber = "170"
             landmarkName = "configData()"
             landmarkType = "7">
          </BreakpointContent>
@@ -46,8 +46,8 @@
             filePath = "CastGallery/App/ScreenModules/CharacterDetail/Presentation/View/CharacterDetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "165"
-            endingLineNumber = "165"
+            startingLineNumber = "159"
+            endingLineNumber = "159"
             landmarkName = "stateController()"
             landmarkType = "7">
             <Locations>
@@ -94,8 +94,8 @@
             filePath = "CastGallery/App/ScreenModules/CharacterDetail/Presentation/View/CharacterDetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "218"
-            endingLineNumber = "218"
+            startingLineNumber = "205"
+            endingLineNumber = "205"
             landmarkName = "didTapExpendableButton()"
             landmarkType = "7">
          </BreakpointContent>
