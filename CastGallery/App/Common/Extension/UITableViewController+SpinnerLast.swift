@@ -14,4 +14,11 @@ extension UITableViewController {
         spinner.frame = CGRect(x: .zero, y: .zero, width: tableView.bounds.width, height: CGFloat(ViewValues.defaultHeightCell))
         tableView.tableFooterView = spinner
     }
+    
+    func addSpinnerFirstCell() {
+        let spinner = UIActivityIndicatorView(style: .medium)
+        spinner.startAnimating()
+        spinner.frame = CGRect(x: .zero, y: .zero, width: tableView.bounds.width, height: CGFloat(ViewValues.defaultHeightCell))
+        tableView.tableHeaderView = spinner
+    }
 }

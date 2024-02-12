@@ -18,6 +18,7 @@ final class CharactersViewController: UITableViewController {
     private var cancellable = Set<AnyCancellable>()
     private let viewModel: CharactersViewModel
     private var coordinator: CharactersViewControllerCoordinator
+    private let searchController = UISearchController()
 
     // MARK: - Life Cycle
     init(viewModel: CharactersViewModel, coordinator: CharactersViewControllerCoordinator) {
@@ -33,16 +34,26 @@ final class CharactersViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.viewDidLoad()
-        configTableView()
+        configureSearchController()
+        configureTableView()
         stateController()
     }
 
     // MARK: - Helpers
-    private func configTableView() {
+    private func configureSearchController() {
+        self.searchController.searchResultsUpdater = self
+        self.searchController.obscuresBackgroundDuringPresentation = false
+        self.searchController.hidesNavigationBarDuringPresentation = true
+        self.searchController.searchBar.placeholder = AppLocalized.search
+        
+        self.navigationItem.searchController = searchController
+        self.definesPresentationContext = false
+        self.navigationItem.hidesSearchBarWhenScrolling = false
+    }
+
+    private func configureTableView() {
         tableView.separatorStyle = .none
-        tableView.register(
-            CharacterItemTableViewCell.self,
-            forCellReuseIdentifier: CharacterItemTableViewCell.reuseIdentifier)
+        tableView.register(CharacterItemTableViewCell.self, forCellReuseIdentifier: CharacterItemTableViewCell.reuseIdentifier)
         addSpinerLastCell()
     }
     
@@ -61,6 +72,13 @@ final class CharactersViewController: UITableViewController {
                 }
             }
             .store(in: &cancellable)
+    }
+}
+
+// MARK: - UISearchController
+extension CharactersViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        print(searchController.searchBar.text ?? "")
     }
 }
 
@@ -96,7 +114,6 @@ extension CharactersViewController {
         coordinator.didSelectCell(urlDetail: urlDetail)
     }
 }
-
 
 // MARK: - Extensions
 extension CharactersViewController: MessageDisplayable { }
