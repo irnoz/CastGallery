@@ -23,5 +23,7 @@ final class CharacterDetailCoordinator: Coordinator {
 }
 
 extension CharacterDetailCoordinator: CharacterDetailViewControllerCoordinator {
-    
+    func didTapExpendableButton() {
+        print("expand eprisodes")
+    }
 }

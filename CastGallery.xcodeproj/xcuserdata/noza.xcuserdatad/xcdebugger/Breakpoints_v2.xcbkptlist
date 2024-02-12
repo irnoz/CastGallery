@@ -20,5 +20,85 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E4678F7A-7795-4F1F-BEFD-0D20CBFE4D71"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CastGallery/App/ScreenModules/CharacterDetail/Presentation/View/CharacterDetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "175"
+            endingLineNumber = "175"
+            landmarkName = "configData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F2056220-5505-4BD5-A56A-201A27775B8A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CastGallery/App/ScreenModules/CharacterDetail/Presentation/View/CharacterDetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "165"
+            endingLineNumber = "165"
+            landmarkName = "stateController()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F2056220-5505-4BD5-A56A-201A27775B8A - 65e9b33a2f2e5378"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CastGallery.CharacterDetailViewController.stateController() -&gt; ()"
+                  moduleName = "CastGallery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/noza/Developer/projects/IosProjects/CastGallery/CastGallery/App/ScreenModules/CharacterDetail/Presentation/View/CharacterDetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "165"
+                  endingLineNumber = "165"
+                  offsetFromSymbolStart = "779">
+               </Location>
+               <Location
+                  uuid = "F2056220-5505-4BD5-A56A-201A27775B8A - aabeceac7b4907b9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (CastGallery.StateController) -&gt; () in CastGallery.CharacterDetailViewController.stateController() -&gt; ()"
+                  moduleName = "CastGallery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/noza/Developer/projects/IosProjects/CastGallery/CastGallery/App/ScreenModules/CharacterDetail/Presentation/View/CharacterDetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "165"
+                  endingLineNumber = "165"
+                  offsetFromSymbolStart = "977">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "76A00273-F939-4BD7-BD02-8A467FEE6744"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CastGallery/App/ScreenModules/CharacterDetail/Presentation/View/CharacterDetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "217"
+            endingLineNumber = "217"
+            landmarkName = "didTapExpendableButton()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

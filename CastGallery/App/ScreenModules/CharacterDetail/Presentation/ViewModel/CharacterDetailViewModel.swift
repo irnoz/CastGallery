@@ -11,7 +11,7 @@ import Combine
 protocol CharacterDetailViewModel: BaseViewModel {
     var name: String? { get }
     var status: String { get }
-    var specia: String { get }
+    var specie: String { get }
     var imageData: Data? { get }
     var origin: String { get }
     var location: String { get }
@@ -29,7 +29,7 @@ final class CharacterDetailViewModelImplementation: CharacterDetailViewModel {
         character?.status?.description ?? .empty
     }
 
-    var specia: String {
+    var specie: String {
         character?.specie.description ?? .empty
     }
 
@@ -56,7 +56,16 @@ final class CharacterDetailViewModelImplementation: CharacterDetailViewModel {
     }
 
     func viewDidLoad() {
-        
+        state.send(.loading)
+        Task {
+            do {
+                let result = try await loadCharacterDetailUseCase.execute()
+                character = result
+                state.send(.succes)
+            } catch {
+                state.send(.fail(error: error.localizedDescription))
+            }
+        }
     }
     
     
