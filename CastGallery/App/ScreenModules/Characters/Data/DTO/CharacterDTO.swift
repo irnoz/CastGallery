@@ -10,6 +10,7 @@ struct CharacterDTO: Decodable {
     let name: String
     let status: String?
     let species: String?
+    let gender: String
     let image: String?
     let url: String
     let origin: OriginDTO

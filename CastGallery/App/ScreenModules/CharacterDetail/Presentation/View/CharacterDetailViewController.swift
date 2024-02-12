@@ -170,6 +170,7 @@ final class CharacterDetailViewController: UIViewController {
         statusLabel.text = viewModel.status
         specieLabel.text = viewModel.specie
         originLabel.text = viewModel.origin
+        genderLabel.text = viewModel.gender
         locationLabel.text = viewModel.location
         characterImageView.setImageFromData(data: viewModel.imageData)
 //        episodesButton.configuration?.subtitle = viewModel.episodes

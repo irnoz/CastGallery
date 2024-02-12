@@ -84,6 +84,7 @@
 		A8A687962B79E843002E38ED /* CharacterDTO+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A687952B79E843002E38ED /* CharacterDTO+Mapping.swift */; };
 		A8A687992B79EA99002E38ED /* LoadCharacterDetailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A687982B79EA99002E38ED /* LoadCharacterDetailUseCase.swift */; };
 		A8A6879D2B79ED37002E38ED /* CharacterDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A6879C2B79ED37002E38ED /* CharacterDetailViewModel.swift */; };
+		A8A6879F2B7A0F08002E38ED /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A6879E2B7A0F08002E38ED /* Gender.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -185,6 +186,7 @@
 		A8A687952B79E843002E38ED /* CharacterDTO+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CharacterDTO+Mapping.swift"; sourceTree = "<group>"; };
 		A8A687982B79EA99002E38ED /* LoadCharacterDetailUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadCharacterDetailUseCase.swift; sourceTree = "<group>"; };
 		A8A6879C2B79ED37002E38ED /* CharacterDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewModel.swift; sourceTree = "<group>"; };
+		A8A6879E2B7A0F08002E38ED /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -683,6 +685,7 @@
 				A8A687462B78A7D7002E38ED /* Origin.swift */,
 				A8A687482B78A80F002E38ED /* Location.swift */,
 				A8A6875B2B78AC17002E38ED /* Info.swift */,
+				A8A6879E2B7A0F08002E38ED /* Gender.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -1027,6 +1030,7 @@
 				A8A6876A2B78BF62002E38ED /* CharacterItemViewModel.swift in Sources */,
 				A8A687822B7938EF002E38ED /* AppContainer.swift in Sources */,
 				A8A687002B77CA34002E38ED /* MenuRepository.swift in Sources */,
+				A8A6879F2B7A0F08002E38ED /* Gender.swift in Sources */,
 				A8A687172B77DDA1002E38ED /* ApiClientServiceImplementation.swift in Sources */,
 				A8A6870D2B77CD4B002E38ED /* HomeViewModel.swift in Sources */,
 				A8A687452B78A54F002E38ED /* Specie.swift in Sources */,

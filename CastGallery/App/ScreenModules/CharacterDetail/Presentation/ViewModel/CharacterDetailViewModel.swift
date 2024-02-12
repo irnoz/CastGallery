@@ -12,6 +12,7 @@ protocol CharacterDetailViewModel: BaseViewModel {
     var name: String? { get }
     var status: String { get }
     var specie: String { get }
+    var gender: String { get }
     var imageData: Data? { get }
     var origin: String { get }
     var location: String { get }
@@ -20,6 +21,9 @@ protocol CharacterDetailViewModel: BaseViewModel {
 final class CharacterDetailViewModelImplementation: CharacterDetailViewModel {
     
     var state: PassthroughSubject<StateController, Never>
+    private let loadCharacterDetailUseCase: LoadCharacterDetailUseCase
+    private let dataImageUseCase: ImageDataUseCase
+    private var character: Character?
 
     var name: String? {
         character?.name ?? .empty
@@ -33,9 +37,9 @@ final class CharacterDetailViewModelImplementation: CharacterDetailViewModel {
         character?.specie.description ?? .empty
     }
 
-//    var gender: String {
-//        character?.gender
-//    }
+    var gender: String {
+        character?.gender.description ?? .empty
+    }
 
     var origin: String {
         character?.origin.description ?? .empty
@@ -48,10 +52,6 @@ final class CharacterDetailViewModelImplementation: CharacterDetailViewModel {
     var imageData: Data? {
         dataImageUseCase.getDataFromCache(url: character?.urlImage)
     }
-
-    private let loadCharacterDetailUseCase: LoadCharacterDetailUseCase
-    private let dataImageUseCase: ImageDataUseCase
-    private var character: Character?
     
     init(state: PassthroughSubject<StateController, Never>, loadCharacterDetailUseCase: LoadCharacterDetailUseCase, dataImageUseCase: ImageDataUseCase) {
         self.state = state

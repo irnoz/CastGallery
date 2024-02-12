@@ -22,6 +22,15 @@ struct AppLocalized {
     static let specieAlien = "Specie: Alien"
     static let specie = "Specie: "
     
+    static let female = "Female"
+    static let male = "Male"
+    static let genderless = "Genderless"
+    
+    static let genderFemale = "Gender: Female"
+    static let genderMale = "Gender: Male"
+    static let genderUnknown = "Gender: Unknown"
+    static let genderGenderless = "Gender: Genderless"
+    
     static let origin = "Origin: "
     
     static let Location = "Location: "

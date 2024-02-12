@@ -10,6 +10,7 @@ struct Character {
     let name: String
     let status: CharacterStatus?
     let specie: Specie
+    let gender: Gender
     let urlCharacter: String
     let urlImage: String?
     let origin: Origin
