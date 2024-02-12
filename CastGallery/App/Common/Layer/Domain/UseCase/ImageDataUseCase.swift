@@ -9,7 +9,7 @@ import Foundation
 
 protocol ImageDataUseCase {
     func getData(url: URL?) async -> Data?
-    func getDataFromCache(url: URL?) -> Data?
+    func getDataFromCache(url: String?) -> Data?
 }
 
 struct ImageDataUseCaseImplementation: ImageDataUseCase {
@@ -19,7 +19,7 @@ struct ImageDataUseCaseImplementation: ImageDataUseCase {
         await imageDataRepository.fetchData(url: url)
     }
     
-    func getDataFromCache(url: URL?) -> Data? {
+    func getDataFromCache(url: String?) -> Data? {
         imageDataRepository.getFromCache(url: url)
     }
 }

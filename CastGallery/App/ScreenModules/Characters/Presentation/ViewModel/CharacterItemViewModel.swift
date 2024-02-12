@@ -29,7 +29,7 @@ struct CharacterItemViewModel {
     }
 
     var imageData: Data? {
-        imageDataUseCase.getDataFromCache(url: URL(string: character.urlImage ?? .empty))
+        imageDataUseCase.getDataFromCache(url: character.urlImage)
     }
 
     func getImageData() async -> Data? {
