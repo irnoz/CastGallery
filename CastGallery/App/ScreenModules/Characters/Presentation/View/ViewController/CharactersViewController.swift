@@ -49,6 +49,11 @@ final class CharactersViewController: UITableViewController {
         self.navigationItem.searchController = searchController
         self.definesPresentationContext = false
         self.navigationItem.hidesSearchBarWhenScrolling = false
+        
+        searchController.delegate = self
+        searchController.searchBar.delegate = self
+        searchController.searchBar.showsBookmarkButton = true
+        searchController.searchBar.setImage(UIImage(systemName: "line.horizontal.3.decrease"), for: .bookmark, state: .normal)
     }
 
     private func configureTableView() {
@@ -76,9 +81,13 @@ final class CharactersViewController: UITableViewController {
 }
 
 // MARK: - UISearchController
-extension CharactersViewController: UISearchResultsUpdating {
+extension CharactersViewController: UISearchResultsUpdating, UISearchControllerDelegate, UISearchBarDelegate {
     func updateSearchResults(for searchController: UISearchController) {
-        print(searchController.searchBar.text ?? "")
+        self.tableView.reloadData()
+    }
+    
+    func searchBarBookmarkButtonClicked(_ searchBar: UISearchBar) {
+        print("Search bar button called!")
     }
 }
 
@@ -92,7 +101,8 @@ extension CharactersViewController {
             return UITableViewCell()
         }
         let row = indexPath.row
-        let itemViewModel = viewModel.getItemMenuViewModel(row: row)
+        let inSearchMode = self.viewModel.inSearchMode(searchController)
+        let itemViewModel = viewModel.getItemMenuViewModel(row: row, inSearchMode: inSearchMode)
         cell.configureData(viewModel: itemViewModel)
         return cell
     }
@@ -102,7 +112,8 @@ extension CharactersViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.characterItemsCount
+        let inSearchMode = self.viewModel.inSearchMode(searchController)
+        return inSearchMode ? self.viewModel.filteredCharacterItemsCount : self.viewModel.characterItemsCount
     }
 }
 
@@ -110,7 +121,8 @@ extension CharactersViewController {
 extension CharactersViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let row = indexPath.row
-        let urlDetail = viewModel.getUrlDetail(row: row)
+        let inSearchMode = self.viewModel.inSearchMode(searchController)
+        let urlDetail = viewModel.getUrlDetail(row: row, inSearchMode: inSearchMode)
         coordinator.didSelectCell(urlDetail: urlDetail)
     }
 }
