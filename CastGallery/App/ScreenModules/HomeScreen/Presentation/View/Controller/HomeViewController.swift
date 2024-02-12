@@ -12,7 +12,7 @@ protocol HomeViewControllerCoordinator: AnyObject {
     func didSelectMenuCell(model: MenuItem)
 }
 
-final class HomeController: UICollectionViewController {
+final class HomeViewController: UICollectionViewController {
 
     private let viewModel: HomeViewModel
     private var cancellable = Set<AnyCancellable>()
@@ -62,7 +62,8 @@ final class HomeController: UICollectionViewController {
     }
 }
 
-extension HomeController {
+// MARK: - CollectionViewDataSource
+extension HomeViewController {
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.menuItemsCount
     }
@@ -81,13 +82,15 @@ extension HomeController {
     }
 }
 
-extension HomeController {
+// MARK: - CollectionViewDelegate
+extension HomeViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let model = viewModel.getMenuItem(indexPath: indexPath)
         coordinator?.didSelectMenuCell(model: model)
     }
 }
 
-extension HomeController: SpinnerDisplayable { }
+// MARK: - Extensions
+extension HomeViewController: SpinnerDisplayable { }
 
-extension HomeController: MessageDisplayable { }
+extension HomeViewController: MessageDisplayable { }

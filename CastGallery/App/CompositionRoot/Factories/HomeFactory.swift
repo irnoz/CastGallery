@@ -23,7 +23,7 @@ struct HomeFactoryImplementation: HomeFactory {
         let state = PassthroughSubject<StateController, Never>()
         let loadMenuUseCase = LoadMenuUseCaseImplementation(menuRepository: menuRepository)
         let homeViewModel = HomeViewModelImplementation(state: state, loadMenuUseCase: loadMenuUseCase)
-        let homeController = HomeController(viewModel: homeViewModel, layout: makeLayout(), coordinator: coordinator)
+        let homeController = HomeViewController(viewModel: homeViewModel, layout: makeLayout(), coordinator: coordinator)
         homeController.title = AppLocalized.appName
         return homeController
     }
