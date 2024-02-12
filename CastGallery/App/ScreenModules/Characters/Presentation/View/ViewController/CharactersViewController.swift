@@ -83,7 +83,8 @@ final class CharactersViewController: UITableViewController {
 // MARK: - UISearchController
 extension CharactersViewController: UISearchResultsUpdating, UISearchControllerDelegate, UISearchBarDelegate {
     func updateSearchResults(for searchController: UISearchController) {
-        self.tableView.reloadData()
+        let searchTerm = searchController.searchBar.text
+        self.viewModel.updateSearchController(searchBarText: searchTerm)
     }
     
     func searchBarBookmarkButtonClicked(_ searchBar: UISearchBar) {

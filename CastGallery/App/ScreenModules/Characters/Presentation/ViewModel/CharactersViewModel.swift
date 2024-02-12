@@ -106,7 +106,8 @@ extension CharactersViewModelImplementation {
             guard !searchBarText.isEmpty else { viewDidLoad(); return }
             
             self.filteredCharacters = self.characters.filter({ character in
-                character.name.lowercased().contains(searchBarText)
+                print(character.name)
+                return character.name.lowercased().contains(searchBarText)
             })
         }
         
