@@ -41,6 +41,21 @@ final class CharacterDetailViewController: UIViewController {
         return label
     }()
 
+//    private let episodesList: UIStackView = {
+//        let stackView = UIStackView()
+//        stackView.alignment = .center
+//        stackView.axis = .horizontal
+//        stackView.distribution = .equalCentering
+//        for _ in 0...5 {
+//            let episodeLabel = UILabel()
+//            episodeLabel.text = "Ep_0"
+//            episodeLabel.font = UIFont.preferredFont(forTextStyle: .title2)
+//            episodeLabel.textAlignment = .center
+//            stackView.addArrangedSubview(episodeLabel)
+//        }
+//        return stackView
+//    }()
+
     private lazy var statusLabel: UILabel = makeGrayLabel(text: "Status: NA")
     private lazy var specieLabel: UILabel = makeGrayLabel(text: "Specie: NA")
     private lazy var genderLabel: UILabel = makeGrayLabel(text: "Gender: NA")
@@ -128,7 +143,7 @@ final class CharacterDetailViewController: UIViewController {
             right: containerView.rightAnchor,
             pTop: ViewValues.smallPadding)
 
-        let buttonStackView = UIStackView(arrangedSubviews: [episodesButton, nameLabel])
+        let buttonStackView = UIStackView(arrangedSubviews: [episodesButton])
         buttonStackView.axis = .vertical
         buttonStackView.spacing = ViewValues.normalPadding
         
