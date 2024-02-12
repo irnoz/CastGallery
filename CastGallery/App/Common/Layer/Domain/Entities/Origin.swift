@@ -9,3 +9,9 @@ struct Origin {
     let name: String
     let url: String
 }
+
+extension Origin: CustomStringConvertible {
+    var description: String {
+        "\(AppLocalized.origin) \(name)"
+    }
+}

@@ -11,3 +11,11 @@ struct Location {
     let dimension: String?
     let url: String
 }
+
+extension Location: CustomStringConvertible {
+    var description: String {
+        "\(AppLocalized.Location) \(name)"
+    }
+    
+    
+}

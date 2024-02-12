@@ -33,16 +33,20 @@ final class CharacterDetailViewModelImplementation: CharacterDetailViewModel {
         character?.specie.description ?? .empty
     }
 
-    var imageData: Data? {
-        dataImageUseCase.getDataFromCache(url: character?.urlImage)
-    }
+//    var gender: String {
+//        character?.gender
+//    }
 
     var origin: String {
-        character?.origin.name ?? .empty
+        character?.origin.description ?? .empty
     }
 
     var location: String {
-        character?.location.name ?? .empty
+        character?.location.description ?? .empty
+    }
+
+    var imageData: Data? {
+        dataImageUseCase.getDataFromCache(url: character?.urlImage)
     }
 
     private let loadCharacterDetailUseCase: LoadCharacterDetailUseCase
