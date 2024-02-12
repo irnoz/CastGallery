@@ -9,20 +9,20 @@ import UIKit
 import Combine
 
 protocol CharactersViewControllerCoordinator {
-    func didSelectMenuCell(urlDetail: String)
+    func didSelectCell(urlDetail: String)
 }
 
 final class CharactersViewController: UITableViewController {
 
-    // MARK: - Public Properties
-    private var cancellable = Set<AnyCancellable>()
-
     // MARK: - Private Properties
+    private var cancellable = Set<AnyCancellable>()
     private let viewModel: CharactersViewModel
+    private var coordinator: CharactersViewControllerCoordinator
 
     // MARK: - Life Cycle
-    init(viewModel: CharactersViewModel) {
+    init(viewModel: CharactersViewModel, coordinator: CharactersViewControllerCoordinator) {
         self.viewModel = viewModel
+        self.coordinator = coordinator
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -88,4 +88,15 @@ extension CharactersViewController {
     }
 }
 
+// MARK: - TableViewDataSource
+extension CharactersViewController {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let row = indexPath.row
+        let urlDetail = viewModel.getUrlDetail(row: row)
+        coordinator.didSelectCell(urlDetail: urlDetail)
+    }
+}
+
+
+// MARK: - Extensions
 extension CharactersViewController: MessageDisplayable { }

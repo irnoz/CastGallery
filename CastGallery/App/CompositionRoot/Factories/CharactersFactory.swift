@@ -10,6 +10,7 @@ import Combine
 
 protocol CharactersFactory {
     func makeModule(coordinator: CharactersViewControllerCoordinator) -> UIViewController
+    func makeCharacterDetailCoordinator(navigation: UINavigationController, urlDetail: String) -> Coordinator
 }
 
 struct charactersFactoryImplementation: CharactersFactory {
@@ -24,9 +25,15 @@ struct charactersFactoryImplementation: CharactersFactory {
         let loadCharactersUseCase = LoadCharactersUseCaseImplementation(characterRepository: characterRepository,url: urlList)
         let lastPageValidationUseCase = LastPageValidationUseCaseImplementation()
         let viewModel = CharactersViewModelImplementation(state: state, loadCharactersUseCase: loadCharactersUseCase, lastPageValidationUseCase: lastPageValidationUseCase, imageDataUseCase: appContainer.getDataImageUseCase())
-        let controller = CharactersViewController(viewModel: viewModel)
+        let controller = CharactersViewController(viewModel: viewModel, coordinator: coordinator)
         controller.navigationController?.navigationBar.prefersLargeTitles = true
         controller.title = "Characters"
         return controller
+    }
+    
+    func makeCharacterDetailCoordinator(navigation: UINavigationController, urlDetail: String) -> Coordinator {
+        let characterDetailFactory = CharacterDetailFactoryImplementation(urlDetail: urlDetail, appContainer: appContainer)
+        let characterDetailCoordinator = CharacterDetailCoordinator(navigation: navigation, characterDetailFactory: characterDetailFactory)
+        return characterDetailCoordinator
     }
 }

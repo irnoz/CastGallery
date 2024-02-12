@@ -76,6 +76,9 @@
 		A8A687802B793652002E38ED /* ImageDataUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A6877F2B793652002E38ED /* ImageDataUseCase.swift */; };
 		A8A687822B7938EF002E38ED /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A687812B7938EF002E38ED /* AppContainer.swift */; };
 		A8A687842B793F8B002E38ED /* UIImageView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A687832B793F8B002E38ED /* UIImageView+Utils.swift */; };
+		A8A687872B79E033002E38ED /* CharacterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A687862B79E033002E38ED /* CharacterDetailViewController.swift */; };
+		A8A687892B79E08E002E38ED /* CharacterDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A687882B79E08E002E38ED /* CharacterDetailCoordinator.swift */; };
+		A8A6878B2B79E0DE002E38ED /* CharacterDetailFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A6878A2B79E0DE002E38ED /* CharacterDetailFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -169,6 +172,9 @@
 		A8A6877F2B793652002E38ED /* ImageDataUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataUseCase.swift; sourceTree = "<group>"; };
 		A8A687812B7938EF002E38ED /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
 		A8A687832B793F8B002E38ED /* UIImageView+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Utils.swift"; sourceTree = "<group>"; };
+		A8A687862B79E033002E38ED /* CharacterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewController.swift; sourceTree = "<group>"; };
+		A8A687882B79E08E002E38ED /* CharacterDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailCoordinator.swift; sourceTree = "<group>"; };
+		A8A6878A2B79E0DE002E38ED /* CharacterDetailFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -342,6 +348,9 @@
 		A8A686D62B76357F002E38ED /* CharacterDetail */ = {
 			isa = PBXGroup;
 			children = (
+				A8A6878D2B79E601002E38ED /* Data */,
+				A8A6878C2B79E5F3002E38ED /* Domain */,
+				A8A687852B79E018002E38ED /* Presentation */,
 			);
 			path = CharacterDetail;
 			sourceTree = "<group>";
@@ -451,6 +460,7 @@
 			children = (
 				A8A686F02B765666002E38ED /* HomeCoordinator.swift */,
 				A8A687372B781DBB002E38ED /* CharactersCoordinator.swift */,
+				A8A687882B79E08E002E38ED /* CharacterDetailCoordinator.swift */,
 			);
 			path = CoordinatorScreens;
 			sourceTree = "<group>";
@@ -468,6 +478,7 @@
 				A8A686EE2B764520002E38ED /* AppFactory.swift */,
 				A8A686F22B7656C7002E38ED /* HomeFactory.swift */,
 				A8A687322B781B94002E38ED /* CharactersFactory.swift */,
+				A8A6878A2B79E0DE002E38ED /* CharacterDetailFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -779,6 +790,36 @@
 			path = UseCase;
 			sourceTree = "<group>";
 		};
+		A8A687852B79E018002E38ED /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				A8A687862B79E033002E38ED /* CharacterDetailViewController.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		A8A6878C2B79E5F3002E38ED /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				A8A6878E2B79E616002E38ED /* CharacterDetailRepository */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		A8A6878D2B79E601002E38ED /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		A8A6878E2B79E616002E38ED /* CharacterDetailRepository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CharacterDetailRepository;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -944,6 +985,7 @@
 				A8A687062B77CB4A002E38ED /* MenuRepositoryImplementation.swift in Sources */,
 				A8A687412B78A306002E38ED /* CharacterStatus.swift in Sources */,
 				A8A687752B79127D002E38ED /* ApiClientServiceImplementation+RemoteImageDataService.swift in Sources */,
+				A8A6878B2B79E0DE002E38ED /* CharacterDetailFactory.swift in Sources */,
 				A8A687522B78A9F4002E38ED /* OriginDTO.swift in Sources */,
 				A8A6871A2B77DE6B002E38ED /* ApiError.swift in Sources */,
 				A8A687542B78A9FB002E38ED /* LocationDTO.swift in Sources */,
@@ -967,8 +1009,10 @@
 				A8A687712B790844002E38ED /* LastPageValidationUseCase.swift in Sources */,
 				A8A687682B78BEC2002E38ED /* CharactersViewModel.swift in Sources */,
 				A8A686F12B765666002E38ED /* HomeCoordinator.swift in Sources */,
+				A8A687892B79E08E002E38ED /* CharacterDetailCoordinator.swift in Sources */,
 				A8A686A02B7631FF002E38ED /* SceneDelegate.swift in Sources */,
 				A8A687492B78A80F002E38ED /* Location.swift in Sources */,
+				A8A687872B79E033002E38ED /* CharacterDetailViewController.swift in Sources */,
 				A8A687142B77DD07002E38ED /* ApiClientService.swift in Sources */,
 				A8A6872D2B780D05002E38ED /* MessageDisplayable.swift in Sources */,
 				A8A687642B78BC1F002E38ED /* LoadCharactersUseCase.swift in Sources */,

@@ -12,7 +12,7 @@ protocol CharactersViewModel: BaseViewModel {
     var lastPage: Bool { get }
 
     func getItemMenuViewModel(row: Int) -> CharacterItemViewModel
-    func getUrlList(row: Int) -> String
+    func getUrlDetail(row: Int) -> String
 }
 
 final class CharactersViewModelImplementation: CharactersViewModel {
@@ -78,7 +78,7 @@ final class CharactersViewModelImplementation: CharactersViewModel {
         return CharacterItemViewModel(character: character, imageDataUseCase: imageDataUseCase)
     }
 
-    func getUrlList(row: Int) -> String {
+    func getUrlDetail(row: Int) -> String {
         let character = characters[row]
         return character.urlCharacter
     }
