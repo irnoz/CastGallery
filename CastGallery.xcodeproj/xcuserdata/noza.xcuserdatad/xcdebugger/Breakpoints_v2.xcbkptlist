@@ -160,8 +160,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "56"
             endingLineNumber = "56"
-            landmarkName = "CharactersViewModelImplementation"
-            landmarkType = "3">
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
             <Locations>
                <Location
                   uuid = "072E004B-FE3D-4AFD-B9CF-F68C60A6FC39 - 83d96742fffa1e0b"
@@ -208,8 +208,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "101"
             endingLineNumber = "101"
-            landmarkName = "CharactersViewModelImplementation"
-            landmarkType = "21">
+            landmarkName = "isInSearchMode(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -224,7 +224,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "77"
             endingLineNumber = "77"
-            landmarkName = "updateStateUI(resultUseCase:)"
+            landmarkName = "getItemMenuViewModel(row:isInSearchMode:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

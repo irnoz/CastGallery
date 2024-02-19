@@ -24,11 +24,7 @@ final class HomeCoordinator: Coordinator {
 
 extension HomeCoordinator: HomeViewControllerCoordinator {
     func didSelectMenuCell(model: MenuItem) {
-        goToCharacters(urlList: model.url)
-    }
-    
-    private func goToCharacters(urlList: String) {
-        let charactersCoordinator = homeFactory.makeCharactersCoordinator(navigation: navigation, urlList: urlList)
+        let charactersCoordinator = homeFactory.makeCharactersCoordinator(navigation: navigation, urlList: model.url)
         charactersCoordinator.start()
     }
 }
