@@ -176,8 +176,40 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "25"
             endingLineNumber = "25"
-            landmarkName = "updateLastPage(itemsCount:)"
+            landmarkName = "updateLastPage(itemsCount:currentPage:pages:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "41E8B489-9D78-4889-AB3D-1BF9085AFE75 - d20c74aa04bd75fa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CastGallery.LastPageValidationUseCaseImplementation.updateLastPage(itemsCount: Swift.Int) -&gt; ()"
+                  moduleName = "CastGallery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/noza/Developer/projects/IosProjects/CastGallery/CastGallery/App/ScreenModules/Characters/Domain/UseCase/LastPageValidationUseCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "112">
+               </Location>
+               <Location
+                  uuid = "41E8B489-9D78-4889-AB3D-1BF9085AFE75 - 5a9e73eede034212"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CastGallery.LastPageValidationUseCaseImplementation.updateLastPage(itemsCount: Swift.Int, currentPage: Swift.Optional&lt;Swift.Int&gt;, pages: Swift.Optional&lt;Swift.Int&gt;) -&gt; ()"
+                  moduleName = "CastGallery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/noza/Developer/projects/IosProjects/CastGallery/CastGallery/App/ScreenModules/Characters/Domain/UseCase/LastPageValidationUseCase.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "448">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

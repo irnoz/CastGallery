@@ -6,6 +6,7 @@
 //
 
 struct InfoDTO: Decodable {
+    let pages: Int
     let next: String
     
 }

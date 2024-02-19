@@ -110,7 +110,7 @@ extension CharactersViewController {
     }
 
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        tableView.tableFooterView?.isHidden = viewModel.lastPage
+        tableView.tableFooterView?.isHidden = viewModel.lastPage || self.viewModel.isInSearchMode(searchController)
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

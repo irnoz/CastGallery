@@ -15,7 +15,7 @@ extension ResultCharactersDTO {
             let location = Location(name: $0.location.name, type: $0.location.type, dimension: $0.location.dimension, url: $0.location.url)
             return Character(id: $0.id, name: $0.name, status: characterStatus, specie: specie, gender: gender, urlCharacter: $0.url, urlImage: $0.image, origin: origin, location: location)
         }
-        let info = Info(next: info.next)
+        let info = Info(page: info.pages, next: info.next)
         
         return (info: info, characters: charactersModel)
     }

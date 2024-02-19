@@ -6,5 +6,6 @@
 //
 
 struct Info {
+    let page: Int
     let next: String?
 }
