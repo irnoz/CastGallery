@@ -17,7 +17,7 @@ struct LastPageValidationUseCaseImplementation: LastPageValidationUseCase {
     var lastPage: Bool = false
 
     // MARK: - Private Properties
-    private var threshold = 5
+    private var threshold = Constants.threshold
 
     // MARK: - Helper Methods
     mutating func updateLastPage(itemsCount: Int) {

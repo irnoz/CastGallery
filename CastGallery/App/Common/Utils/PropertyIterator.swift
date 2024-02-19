@@ -8,12 +8,12 @@
 protocol PropertyIterator { }
 
 extension PropertyIterator {
-    func dictionaryProperties() -> [String: Any] {
+    func dictionaryProperties() -> [String: String] {
         let mirror = Mirror(reflecting: self)
-        var dictionary: [String: Any] = [:]
-        
+        var dictionary: [String: String] = [:]
+
         mirror.children.forEach { property in
-            dictionary[property.label ?? String()] = property.value
+            dictionary[property.label ?? .empty] = property.value as? String ?? .empty
         }
         
         return dictionary

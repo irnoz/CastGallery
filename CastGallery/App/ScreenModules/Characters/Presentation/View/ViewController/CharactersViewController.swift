@@ -41,19 +41,19 @@ final class CharactersViewController: UITableViewController {
 
     // MARK: - Helpers
     private func configureSearchController() {
-        self.searchController.searchResultsUpdater = self
-        self.searchController.obscuresBackgroundDuringPresentation = false
-        self.searchController.hidesNavigationBarDuringPresentation = true
-        self.searchController.searchBar.placeholder = AppLocalized.search
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.hidesNavigationBarDuringPresentation = true
+        searchController.searchBar.placeholder = AppLocalized.search
         
-        self.navigationItem.searchController = searchController
-        self.definesPresentationContext = false
-        self.navigationItem.hidesSearchBarWhenScrolling = false
+        navigationItem.searchController = searchController
+        definesPresentationContext = false
+        navigationItem.hidesSearchBarWhenScrolling = false
         
         searchController.delegate = self
         searchController.searchBar.delegate = self
         searchController.searchBar.showsBookmarkButton = true
-        searchController.searchBar.setImage(UIImage(systemName: "line.horizontal.3.decrease"), for: .bookmark, state: .normal)
+        searchController.searchBar.setImage(UIImage(systemName: Images.filterImage), for: .bookmark, state: .normal)
     }
 
     private func configureTableView() {
@@ -88,7 +88,7 @@ extension CharactersViewController: UISearchResultsUpdating, UISearchControllerD
     }
     
     func searchBarBookmarkButtonClicked(_ searchBar: UISearchBar) {
-        print("Search bar filter button clicked!")
+        displayFilter()
     }
 }
 
@@ -102,8 +102,8 @@ extension CharactersViewController {
             return UITableViewCell()
         }
         let row = indexPath.row
-        let inSearchMode = self.viewModel.inSearchMode(searchController)
-        let itemViewModel = viewModel.getItemMenuViewModel(row: row, inSearchMode: inSearchMode)
+        let isInSearchMode = self.viewModel.isInSearchMode(searchController)
+        let itemViewModel = viewModel.getItemMenuViewModel(row: row, isInSearchMode: isInSearchMode)
         cell.configureData(viewModel: itemViewModel)
         return cell
     }
@@ -113,8 +113,8 @@ extension CharactersViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let inSearchMode = self.viewModel.inSearchMode(searchController)
-        return inSearchMode ? self.viewModel.filteredCharacterItemsCount : self.viewModel.characterItemsCount
+        let isInSearchMode = self.viewModel.isInSearchMode(searchController)
+        return isInSearchMode ? self.viewModel.filteredCharacterItemsCount : self.viewModel.characterItemsCount
     }
 }
 
@@ -122,11 +122,13 @@ extension CharactersViewController {
 extension CharactersViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let row = indexPath.row
-        let inSearchMode = self.viewModel.inSearchMode(searchController)
-        let urlDetail = viewModel.getUrlDetail(row: row, inSearchMode: inSearchMode)
+        let isInSearchMode = self.viewModel.isInSearchMode(searchController)
+        let urlDetail = viewModel.getUrlDetail(row: row, isInSearchMode: isInSearchMode)
         coordinator.didSelectCell(urlDetail: urlDetail)
     }
 }
 
 // MARK: - Extensions
 extension CharactersViewController: MessageDisplayable { }
+
+extension CharactersViewController: FilterDisplayalbe { }

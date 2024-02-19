@@ -6,6 +6,8 @@
 //
 
 struct AppLocalized {
+    static let charactersTitle = "Characters"
+    
     static let error = "Error"
     static let appName = "CastGallery"
     static let okButton = "OK"

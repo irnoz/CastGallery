@@ -13,7 +13,7 @@ struct HomeItemViewModel {
     }
 
     var title: String {
-        menuItem.title.capitalized
+        "Rick and Morty\n\(menuItem.title.capitalized)"
     }
     
     var imageName: String {

@@ -37,7 +37,7 @@ final class CharacterItemTableViewCell: UITableViewCell {
         label.font = UIFont.preferredFont(
             forTextStyle: .headline,
             compatibleWith: UITraitCollection(legibilityWeight: .bold))
-        label.textColor = .systemBlue
+//        label.textColor = .systemBlue
         label.text = "NA"
         return label
     }()
@@ -131,5 +131,5 @@ final class CharacterItemTableViewCell: UITableViewCell {
     // MARK: - Actions
 }
 
-// MARK: - Extensions here
+// MARK: - Extensions
 extension CharacterItemTableViewCell: Reusable { }

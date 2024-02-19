@@ -10,7 +10,7 @@ import Combine
 
 protocol HomeFactory {
     func makeModule(coordinator: HomeViewControllerCoordinator) -> UIViewController
-    func makeCoordinatorCharacters(navigation: UINavigationController, urlList: String) -> Coordinator
+    func makeCharactersCoordinator(navigation: UINavigationController, urlList: String) -> Coordinator
 }
 
 struct HomeFactoryImplementation: HomeFactory {
@@ -19,7 +19,7 @@ struct HomeFactoryImplementation: HomeFactory {
 
     func makeModule(coordinator: HomeViewControllerCoordinator) -> UIViewController {
         let apiClientService = ApiClientServiceImplementation()
-        let menuRepository = MenuRepositoryImplementation(apiClientService: apiClientService, urlList: Endpoint.baseUrl)
+        let menuRepository = MenuRepositoryImplementation(apiClientService: apiClientService, urlList: Endpoint.rickAndMortyUrl)
         let state = PassthroughSubject<StateController, Never>()
         let loadMenuUseCase = LoadMenuUseCaseImplementation(menuRepository: menuRepository)
         let homeViewModel = HomeViewModelImplementation(state: state, loadMenuUseCase: loadMenuUseCase)
@@ -28,8 +28,8 @@ struct HomeFactoryImplementation: HomeFactory {
         return homeController
     }
 
-    func makeCoordinatorCharacters(navigation: UINavigationController, urlList: String) -> Coordinator {
-        let charactersFactory = charactersFactoryImplementation(urlList: urlList, appContainer: appConteiner)
+    func makeCharactersCoordinator(navigation: UINavigationController, urlList: String) -> Coordinator {
+        let charactersFactory = CharactersFactoryImplementation(urlList: urlList, appContainer: appConteiner)
         let charactersCoordinator = CharactersCoordinator(navigation: navigation, charactersFactory: charactersFactory)
         return charactersCoordinator
     }

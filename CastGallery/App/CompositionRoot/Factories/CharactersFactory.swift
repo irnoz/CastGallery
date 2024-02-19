@@ -13,7 +13,7 @@ protocol CharactersFactory {
     func makeCharacterDetailCoordinator(navigation: UINavigationController, urlDetail: String) -> Coordinator
 }
 
-struct charactersFactoryImplementation: CharactersFactory {
+struct CharactersFactoryImplementation: CharactersFactory {
 
     let urlList: String
     let appContainer: AppContainer
@@ -27,7 +27,7 @@ struct charactersFactoryImplementation: CharactersFactory {
         let viewModel = CharactersViewModelImplementation(state: state, loadCharactersUseCase: loadCharactersUseCase, lastPageValidationUseCase: lastPageValidationUseCase, imageDataUseCase: appContainer.getDataImageUseCase())
         let controller = CharactersViewController(viewModel: viewModel, coordinator: coordinator)
         controller.navigationController?.navigationBar.prefersLargeTitles = true
-        controller.title = "Characters"
+        controller.title = AppLocalized.charactersTitle
         return controller
     }
     

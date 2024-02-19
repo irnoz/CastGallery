@@ -7,38 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "8DD95B7E-41EE-4835-8075-0E999634435E"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CastGallery/App/ScreenModules/HomeScreen/Data/DTO/MenuDto+Mapper.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "13"
-            endingLineNumber = "13"
-            landmarkName = "toDomain()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E4678F7A-7795-4F1F-BEFD-0D20CBFE4D71"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CastGallery/App/ScreenModules/CharacterDetail/Presentation/View/CharacterDetailViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "185"
-            endingLineNumber = "185"
-            landmarkName = "configData()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "F2056220-5505-4BD5-A56A-201A27775B8A"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -94,8 +62,8 @@
             filePath = "CastGallery/App/ScreenModules/CharacterDetail/Presentation/View/CharacterDetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "220"
-            endingLineNumber = "220"
+            startingLineNumber = "214"
+            endingLineNumber = "214"
             landmarkName = "didTapExpendableButton()"
             landmarkType = "7">
          </BreakpointContent>
@@ -167,16 +135,96 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "6E1EDBC0-73ED-4AC0-AE35-92EDDE7D43D4"
+            uuid = "164906D5-0943-4321-92AC-18714C7A48F3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CastGallery/App/Networking/Implementations/ApiClientServiceImplementation.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "decodeModel(data:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "072E004B-FE3D-4AFD-B9CF-F68C60A6FC39"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CastGallery/App/ScreenModules/Characters/Presentation/ViewModel/CharactersViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
-            landmarkName = "updateSearchController(searchBarText:)"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "CharactersViewModelImplementation"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "072E004B-FE3D-4AFD-B9CF-F68C60A6FC39 - 83d96742fffa1e0b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable () async -&gt; () in CastGallery.CharactersViewModelImplementation.viewDidLoad() -&gt; ()"
+                  moduleName = "CastGallery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/noza/Developer/projects/IosProjects/CastGallery/CastGallery/App/ScreenModules/Characters/Presentation/ViewModel/CharactersViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "50">
+               </Location>
+               <Location
+                  uuid = "072E004B-FE3D-4AFD-B9CF-F68C60A6FC39 - 9b282258199e9362"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) await resume partial function for closure #1 @Sendable () async -&gt; () in CastGallery.CharactersViewModelImplementation.viewDidLoad() -&gt; ()"
+                  moduleName = "CastGallery"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/noza/Developer/projects/IosProjects/CastGallery/CastGallery/App/ScreenModules/Characters/Presentation/ViewModel/CharactersViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "45">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A3D3A9FE-27EE-451C-820C-37E39837793D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CastGallery/App/ScreenModules/Characters/Presentation/ViewModel/CharactersViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
+            landmarkName = "CharactersViewModelImplementation"
+            landmarkType = "21">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "15D18175-FBCC-460E-A4EA-4C3F47B51CEA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CastGallery/App/ScreenModules/Characters/Presentation/ViewModel/CharactersViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "updateStateUI(resultUseCase:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

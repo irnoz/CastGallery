@@ -13,14 +13,15 @@ protocol CharactersViewModel: BaseViewModel {
     var filteredCharacterItemsCount: Int { get }
     var lastPage: Bool { get }
 
-    func getItemMenuViewModel(row: Int, inSearchMode: Bool) -> CharacterItemViewModel
-    func getUrlDetail(row: Int, inSearchMode: Bool) -> String
-    func inSearchMode(_ searchController: UISearchController) -> Bool
+    func getItemMenuViewModel(row: Int, isInSearchMode: Bool) -> CharacterItemViewModel
+    func getUrlDetail(row: Int, isInSearchMode: Bool) -> String
+    func isInSearchMode(_ searchController: UISearchController) -> Bool
     func updateSearchController(searchBarText: String?)
 }
 
 final class CharactersViewModelImplementation: CharactersViewModel {
     var state: PassthroughSubject<StateController, Never>
+
     var lastPage: Bool {
         lastPageValidationUseCase.lastPage
     }
@@ -72,29 +73,29 @@ final class CharactersViewModelImplementation: CharactersViewModel {
         }
     }
 
-    func getItemMenuViewModel(row: Int, inSearchMode: Bool) -> CharacterItemViewModel {
+    func getItemMenuViewModel(row: Int, isInSearchMode: Bool) -> CharacterItemViewModel {
         checkAndLoadMoreCharacters(row: row)
-        return makeCharacteritemViewModel(row: row, inSearchMode: inSearchMode)
+        return makeCharacteritemViewModel(row: row, isInSearchMode: isInSearchMode)
     }
 
     private func checkAndLoadMoreCharacters(row: Int) {
         lastPageValidationUseCase.checkAndLoadMoreItems(row: row, actualItems: characters.count, action: viewDidLoad)
     }
     
-    private func makeCharacteritemViewModel(row: Int, inSearchMode: Bool) -> CharacterItemViewModel {
-        let character = inSearchMode ? filteredCharacters[row] : characters[row]
+    private func makeCharacteritemViewModel(row: Int, isInSearchMode: Bool) -> CharacterItemViewModel {
+        let character = isInSearchMode ? filteredCharacters[row] : characters[row]
         return CharacterItemViewModel(character: character, imageDataUseCase: imageDataUseCase)
     }
 
-    func getUrlDetail(row: Int, inSearchMode: Bool) -> String {
-        let character = inSearchMode ? filteredCharacters[row] : characters[row]
+    func getUrlDetail(row: Int, isInSearchMode: Bool) -> String {
+        let character = isInSearchMode ? filteredCharacters[row] : characters[row]
         return character.urlCharacter
     }
 }
 
 // MARK: - Search Functions
 extension CharactersViewModelImplementation {
-    public func inSearchMode(_ searchController: UISearchController) -> Bool {
+    public func isInSearchMode(_ searchController: UISearchController) -> Bool {
         let isActive = searchController.isActive
         let searchText = searchController.searchBar.text ?? .empty
         
@@ -104,7 +105,9 @@ extension CharactersViewModelImplementation {
     public func updateSearchController(searchBarText: String?) {
         if let searchBarText = searchBarText?.lowercased() {
             guard !searchBarText.isEmpty else { viewDidLoad(); return }
-            
+//            var debounceTimer: Timer?
+//            debounceTimer?.invalidate()
+//            debounceTimer = Timer.scheduledTimer(withTimeInterval: 0.3, repeats: true)
             self.filteredCharacters = self.characters.filter({ character in
                 character.name.lowercased().contains(searchBarText)
             })

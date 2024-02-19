@@ -8,4 +8,5 @@
 struct Images {
     static let defaultImage = "default"
     static let loadingImage = "loading"
+    static let filterImage = "line.horizontal.3.decrease"
 }

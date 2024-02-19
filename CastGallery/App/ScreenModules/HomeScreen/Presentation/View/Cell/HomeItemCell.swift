@@ -27,6 +27,8 @@ final class HomeItemCell: UICollectionViewCell {
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.textColor = .white
+        label.numberOfLines = 0
+        label.textAlignment = .center;
         label.font = UIFont.preferredFont(forTextStyle: .headline)
         return label
     }()

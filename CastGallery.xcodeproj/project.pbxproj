@@ -85,6 +85,8 @@
 		A8A687992B79EA99002E38ED /* LoadCharacterDetailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A687982B79EA99002E38ED /* LoadCharacterDetailUseCase.swift */; };
 		A8A6879D2B79ED37002E38ED /* CharacterDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A6879C2B79ED37002E38ED /* CharacterDetailViewModel.swift */; };
 		A8A6879F2B7A0F08002E38ED /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A6879E2B7A0F08002E38ED /* Gender.swift */; };
+		A8A687A62B7BC2FA002E38ED /* FilterDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A687A52B7BC2FA002E38ED /* FilterDisplayable.swift */; };
+		A8A9913A2B81F14100374166 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A991392B81F14100374166 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -187,6 +189,8 @@
 		A8A687982B79EA99002E38ED /* LoadCharacterDetailUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadCharacterDetailUseCase.swift; sourceTree = "<group>"; };
 		A8A6879C2B79ED37002E38ED /* CharacterDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewModel.swift; sourceTree = "<group>"; };
 		A8A6879E2B7A0F08002E38ED /* Gender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
+		A8A687A52B7BC2FA002E38ED /* FilterDisplayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterDisplayable.swift; sourceTree = "<group>"; };
+		A8A991392B81F14100374166 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -288,6 +292,7 @@
 			isa = PBXGroup;
 			children = (
 				A8A686E62B76412D002E38ED /* LaunchScreen */,
+				A8A687A82B7BC763002E38ED /* Episodes */,
 				A8A686D62B76357F002E38ED /* CharacterDetail */,
 				A8A686D52B763564002E38ED /* Characters */,
 				A8A686D42B76342E002E38ED /* HomeScreen */,
@@ -313,8 +318,8 @@
 			children = (
 				A8A6871B2B77E46F002E38ED /* StatusResponse */,
 				A8A687182B77DE50002E38ED /* Errors */,
-				A8A687152B77DD86002E38ED /* Implementations */,
 				A8A687122B77DCD9002E38ED /* ApiService */,
+				A8A687152B77DD86002E38ED /* Implementations */,
 				A8A687252B77EBD2002E38ED /* Endpoint.swift */,
 			);
 			path = Networking;
@@ -382,6 +387,7 @@
 			isa = PBXGroup;
 			children = (
 				A8A6872A2B780972002E38ED /* ViewVlaues.swift */,
+				A8A991392B81F14100374166 /* Constants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -416,8 +422,8 @@
 		A8A686DC2B763618002E38ED /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				A8A6877E2B79363B002E38ED /* UseCase */,
 				A8A687782B79337B002E38ED /* InterfaceRepositories */,
+				A8A6877E2B79363B002E38ED /* UseCase */,
 				A8A6873E2B78A229002E38ED /* Entities */,
 			);
 			path = Domain;
@@ -654,6 +660,7 @@
 			children = (
 				A8A687282B7808EB002E38ED /* SpinnerDisplayable.swift */,
 				A8A6872C2B780D05002E38ED /* MessageDisplayable.swift */,
+				A8A687A52B7BC2FA002E38ED /* FilterDisplayable.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -902,6 +909,37 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		A8A687A82B7BC763002E38ED /* Episodes */ = {
+			isa = PBXGroup;
+			children = (
+				A8A991362B813EB100374166 /* Data */,
+				A8A991372B813EB700374166 /* Domain */,
+				A8A991382B813EBE00374166 /* Presentation */,
+			);
+			path = Episodes;
+			sourceTree = "<group>";
+		};
+		A8A991362B813EB100374166 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		A8A991372B813EB700374166 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		A8A991382B813EBE00374166 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1082,6 +1120,7 @@
 				A8A6877D2B7934C2002E38ED /* ImageDataRepositoryImplementation.swift in Sources */,
 				A8A687612B78ADC4002E38ED /* ResultCharactersDTO+Mapping.swift in Sources */,
 				A8A6873B2B78324F002E38ED /* CharacterItemTableViewCell.swift in Sources */,
+				A8A9913A2B81F14100374166 /* Constants.swift in Sources */,
 				A8A687362B781C5D002E38ED /* CharactersViewController.swift in Sources */,
 				A8A6871D2B77E48A002E38ED /* HttpResponseStatus.swift in Sources */,
 				A8A686F32B7656C7002E38ED /* HomeFactory.swift in Sources */,
@@ -1100,6 +1139,7 @@
 				A8A687992B79EA99002E38ED /* LoadCharacterDetailUseCase.swift in Sources */,
 				A8A687872B79E033002E38ED /* CharacterDetailViewController.swift in Sources */,
 				A8A687142B77DD07002E38ED /* ApiClientService.swift in Sources */,
+				A8A687A62B7BC2FA002E38ED /* FilterDisplayable.swift in Sources */,
 				A8A6872D2B780D05002E38ED /* MessageDisplayable.swift in Sources */,
 				A8A687642B78BC1F002E38ED /* LoadCharactersUseCase.swift in Sources */,
 				A8A6879D2B79ED37002E38ED /* CharacterDetailViewModel.swift in Sources */,

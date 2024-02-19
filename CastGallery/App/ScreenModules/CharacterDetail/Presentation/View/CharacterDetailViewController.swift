@@ -9,7 +9,7 @@ import UIKit
 import Combine
 
 protocol CharacterDetailViewControllerCoordinator {
-    func didTapExpendableButton()
+    func didTapEpisodesCell()
 }
 
 final class CharacterDetailViewController: UIViewController {
@@ -182,7 +182,6 @@ final class CharacterDetailViewController: UIViewController {
         genderLabel.text = viewModel.gender
         locationLabel.text = viewModel.location
         characterImageView.setImageFromData(data: viewModel.imageData)
-//        episodesButton.configuration?.subtitle = viewModel.episodes
     }
 
     private func configButton() {
@@ -205,11 +204,6 @@ final class CharacterDetailViewController: UIViewController {
         configuration.buttonSize = .small
         configuration.titleAlignment = .center
         configuration.cornerStyle = .large
-        configuration.titleTextAttributesTransformer = UIConfigurationTextAttributesTransformer { incoming in
-            var outgoing = incoming
-            outgoing.font = UIFont.preferredFont(forTextStyle: .headline)
-            return outgoing
-        }
 
         button.configuration = configuration
         return button
