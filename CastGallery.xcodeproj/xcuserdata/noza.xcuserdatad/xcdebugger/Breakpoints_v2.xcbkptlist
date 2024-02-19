@@ -151,54 +151,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "072E004B-FE3D-4AFD-B9CF-F68C60A6FC39"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CastGallery/App/ScreenModules/Characters/Presentation/ViewModel/CharactersViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "072E004B-FE3D-4AFD-B9CF-F68C60A6FC39 - 83d96742fffa1e0b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Sendable () async -&gt; () in CastGallery.CharactersViewModelImplementation.viewDidLoad() -&gt; ()"
-                  moduleName = "CastGallery"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/noza/Developer/projects/IosProjects/CastGallery/CastGallery/App/ScreenModules/Characters/Presentation/ViewModel/CharactersViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "55"
-                  endingLineNumber = "55"
-                  offsetFromSymbolStart = "50">
-               </Location>
-               <Location
-                  uuid = "072E004B-FE3D-4AFD-B9CF-F68C60A6FC39 - 9b282258199e9362"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) await resume partial function for closure #1 @Sendable () async -&gt; () in CastGallery.CharactersViewModelImplementation.viewDidLoad() -&gt; ()"
-                  moduleName = "CastGallery"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/noza/Developer/projects/IosProjects/CastGallery/CastGallery/App/ScreenModules/Characters/Presentation/ViewModel/CharactersViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "55"
-                  endingLineNumber = "55"
-                  offsetFromSymbolStart = "45">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "A3D3A9FE-27EE-451C-820C-37E39837793D"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -215,16 +167,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "15D18175-FBCC-460E-A4EA-4C3F47B51CEA"
-            shouldBeEnabled = "No"
+            uuid = "41E8B489-9D78-4889-AB3D-1BF9085AFE75"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CastGallery/App/ScreenModules/Characters/Presentation/ViewModel/CharactersViewModel.swift"
+            filePath = "CastGallery/App/ScreenModules/Characters/Domain/UseCase/LastPageValidationUseCase.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
-            landmarkName = "getItemMenuViewModel(row:isInSearchMode:)"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "updateLastPage(itemsCount:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

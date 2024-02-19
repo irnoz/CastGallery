@@ -85,6 +85,7 @@ extension CharactersViewController: UISearchResultsUpdating, UISearchControllerD
     func updateSearchResults(for searchController: UISearchController) {
         let searchTerm = searchController.searchBar.text
         self.viewModel.updateSearchController(searchBarText: searchTerm)
+        self.tableView.reloadData()
     }
     
     func searchBarBookmarkButtonClicked(_ searchBar: UISearchBar) {
